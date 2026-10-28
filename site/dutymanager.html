@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#x5DE;&#x5E0;&#x5D4;&#x5DC; &#x5EA;&#x5D5;&#x5E8;&#x5DF; - פורטל ביטחון</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="demo/demo.css" />
+</head>
+<body>
+    <header b-9ud7xt2yc2>
+        <nav b-9ud7xt2yc2 class="navbar navbar-expand-sm site-navbar mb-4">
+            <div b-9ud7xt2yc2 class="container-fluid">
+                <a class="navbar-brand" href="home.html">
+                    <img src="assets/images/logo.png" alt="" />
+                    <span b-9ud7xt2yc2>פורטל ביטחון</span>
+                </a>
+                    <div b-9ud7xt2yc2 class="d-flex align-items-center gap-3">
+                        <span b-9ud7xt2yc2 class="user-chip">
+                            <i b-9ud7xt2yc2 class="bi bi-person-circle"></i>
+                            &#x5E0;&#x5D5;&#x5E2;&#x5D4;
+                            (&#x5E7;&#x5D1;&#x5D8;)
+                        </span>
+                        <a class="btn btn-outline-secondary btn-sm" title="החלפת סיסמה" aria-label="החלפת סיסמה" href="account-changepassword.html">
+                            <i b-9ud7xt2yc2 class="bi bi-key"></i>
+                        </a>
+                        <form method="post" class="m-0" action="#" data-demo-action="app:/Account/Logout">
+                            <button b-9ud7xt2yc2 type="submit" class="btn btn-outline-secondary btn-sm">
+                                <i b-9ud7xt2yc2 class="bi bi-box-arrow-left"></i>
+                                התנתקות
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <div b-9ud7xt2yc2 class="container">
+        <main b-9ud7xt2yc2 role="main" class="pb-3">
+            
+<div class="page-head">
+    <h2>מנהל תורן</h2>
+    <a class="btn btn-outline-secondary btn-sm" href="home.html">
+        <i class="bi bi-arrow-right"></i>
+        חזרה לדף הבית
+    </a>
+</div>
+
+
+
+<div class="duty-head">
+    <h4 class="mb-0">פרטי מנהל תורן</h4>
+        <a class="btn btn-primary btn-sm" href="dutymanager-report.html">
+            <i class="bi bi-journal-text"></i>
+            דו"ח מנהל תורן
+        </a>
+</div>
+<div class="duty-card mb-4">
+        <div class="duty-card__row">
+            <div class="duty-card__field">
+                <span class="duty-card__label">שם מנהל התורן</span>
+                <span class="duty-card__value">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</span>
+            </div>
+            <div class="duty-card__field">
+                <span class="duty-card__label">טלפון</span>
+                    <a class="duty-card__value duty-card__phone tabular" href="tel:050-0000005">050-0000005</a>
+            </div>
+        </div>
+</div>
+
+<form method="post" id="dutyManagerForm" action="#" data-demo-action="app:/DutyManager/Save">
+
+    <h4>סידור עבודה שבועי</h4>
+    <div class="table-responsive mb-4">
+        <table class="table table-bordered align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>עמדה / יום</th>
+                        <th class="text-center">&#x5E8;&#x5D0;&#x5E9;&#x5D5;&#x5DF;</th>
+                        <th class="text-center">&#x5E9;&#x5E0;&#x5D9;</th>
+                        <th class="text-center">&#x5E9;&#x5DC;&#x5D9;&#x5E9;&#x5D9;</th>
+                        <th class="text-center">&#x5E8;&#x5D1;&#x5D9;&#x5E2;&#x5D9;</th>
+                        <th class="text-center">&#x5D7;&#x5DE;&#x5D9;&#x5E9;&#x5D9;</th>
+                        <th class="text-center">&#x5E9;&#x5D9;&#x5E9;&#x5D9;</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td class="fw-bold">&#x5D7;&#x5E6;&#x5E8; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;</td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[0].PositionId" value="1" />
+                                    <input type="hidden" name="RosterCells[0].DayOfWeek" value="0" />
+                                    <select name="RosterCells[0].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2" selected="selected">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[1].PositionId" value="1" />
+                                    <input type="hidden" name="RosterCells[1].DayOfWeek" value="1" />
+                                    <select name="RosterCells[1].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3" selected="selected">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[2].PositionId" value="1" />
+                                    <input type="hidden" name="RosterCells[2].DayOfWeek" value="2" />
+                                    <select name="RosterCells[2].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4" selected="selected">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[3].PositionId" value="1" />
+                                    <input type="hidden" name="RosterCells[3].DayOfWeek" value="3" />
+                                    <select name="RosterCells[3].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5" selected="selected">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[4].PositionId" value="1" />
+                                    <input type="hidden" name="RosterCells[4].DayOfWeek" value="4" />
+                                    <select name="RosterCells[4].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6" selected="selected">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[5].PositionId" value="1" />
+                                    <input type="hidden" name="RosterCells[5].DayOfWeek" value="5" />
+                                    <select name="RosterCells[5].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1" selected="selected">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">&#x5DE;&#x5D7;&#x5E1;&#x5DF; &#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;</td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[6].PositionId" value="2" />
+                                    <input type="hidden" name="RosterCells[6].DayOfWeek" value="0" />
+                                    <select name="RosterCells[6].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3" selected="selected">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[7].PositionId" value="2" />
+                                    <input type="hidden" name="RosterCells[7].DayOfWeek" value="1" />
+                                    <select name="RosterCells[7].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4" selected="selected">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[8].PositionId" value="2" />
+                                    <input type="hidden" name="RosterCells[8].DayOfWeek" value="2" />
+                                    <select name="RosterCells[8].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5" selected="selected">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[9].PositionId" value="2" />
+                                    <input type="hidden" name="RosterCells[9].DayOfWeek" value="3" />
+                                    <select name="RosterCells[9].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6" selected="selected">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[10].PositionId" value="2" />
+                                    <input type="hidden" name="RosterCells[10].DayOfWeek" value="4" />
+                                    <select name="RosterCells[10].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1" selected="selected">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[11].PositionId" value="2" />
+                                    <input type="hidden" name="RosterCells[11].DayOfWeek" value="5" />
+                                    <select name="RosterCells[11].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2" selected="selected">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">&#x5E8;&#x5E6;&#x5D9;&#x5E3; &#x5E7;&#x5D9;&#x5E8;&#x5D5;&#x5E8;</td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[12].PositionId" value="3" />
+                                    <input type="hidden" name="RosterCells[12].DayOfWeek" value="0" />
+                                    <select name="RosterCells[12].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4" selected="selected">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[13].PositionId" value="3" />
+                                    <input type="hidden" name="RosterCells[13].DayOfWeek" value="1" />
+                                    <select name="RosterCells[13].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5" selected="selected">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[14].PositionId" value="3" />
+                                    <input type="hidden" name="RosterCells[14].DayOfWeek" value="2" />
+                                    <select name="RosterCells[14].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6" selected="selected">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[15].PositionId" value="3" />
+                                    <input type="hidden" name="RosterCells[15].DayOfWeek" value="3" />
+                                    <select name="RosterCells[15].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1" selected="selected">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[16].PositionId" value="3" />
+                                    <input type="hidden" name="RosterCells[16].DayOfWeek" value="4" />
+                                    <select name="RosterCells[16].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2" selected="selected">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[17].PositionId" value="3" />
+                                    <input type="hidden" name="RosterCells[17].DayOfWeek" value="5" />
+                                    <select name="RosterCells[17].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3" selected="selected">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">&#x5DE;&#x5D7;&#x5E1;&#x5DF; &#x5E6;&#x5E4;&#x5D5;&#x5E0;&#x5D9;</td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[18].PositionId" value="4" />
+                                    <input type="hidden" name="RosterCells[18].DayOfWeek" value="0" />
+                                    <select name="RosterCells[18].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5" selected="selected">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[19].PositionId" value="4" />
+                                    <input type="hidden" name="RosterCells[19].DayOfWeek" value="1" />
+                                    <select name="RosterCells[19].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6" selected="selected">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[20].PositionId" value="4" />
+                                    <input type="hidden" name="RosterCells[20].DayOfWeek" value="2" />
+                                    <select name="RosterCells[20].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1" selected="selected">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[21].PositionId" value="4" />
+                                    <input type="hidden" name="RosterCells[21].DayOfWeek" value="3" />
+                                    <select name="RosterCells[21].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2" selected="selected">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[22].PositionId" value="4" />
+                                    <input type="hidden" name="RosterCells[22].DayOfWeek" value="4" />
+                                    <select name="RosterCells[22].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3" selected="selected">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[23].PositionId" value="4" />
+                                    <input type="hidden" name="RosterCells[23].DayOfWeek" value="5" />
+                                    <select name="RosterCells[23].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4" selected="selected">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">&#x5D0;&#x5D7;&#x5E8;&#x5D0;&#x5D9; &#x5E4;&#x5EA;&#x5D9;&#x5D7;&#x5EA; &#x5D1;&#x5D5;&#x5E7;&#x5E8;</td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[24].PositionId" value="5" />
+                                    <input type="hidden" name="RosterCells[24].DayOfWeek" value="0" />
+                                    <select name="RosterCells[24].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6" selected="selected">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[25].PositionId" value="5" />
+                                    <input type="hidden" name="RosterCells[25].DayOfWeek" value="1" />
+                                    <select name="RosterCells[25].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1" selected="selected">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[26].PositionId" value="5" />
+                                    <input type="hidden" name="RosterCells[26].DayOfWeek" value="2" />
+                                    <select name="RosterCells[26].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2" selected="selected">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[27].PositionId" value="5" />
+                                    <input type="hidden" name="RosterCells[27].DayOfWeek" value="3" />
+                                    <select name="RosterCells[27].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3" selected="selected">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[28].PositionId" value="5" />
+                                    <input type="hidden" name="RosterCells[28].DayOfWeek" value="4" />
+                                    <select name="RosterCells[28].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4" selected="selected">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                            <td>
+                                    <input type="hidden" name="RosterCells[29].PositionId" value="5" />
+                                    <input type="hidden" name="RosterCells[29].DayOfWeek" value="5" />
+                                    <select name="RosterCells[29].ManagerContactId" class="form-select form-select-sm">
+                                        <option value="">-</option>
+                                            <option value="1">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</option>
+                                            <option value="2">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</option>
+                                            <option value="3">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</option>
+                                            <option value="4">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</option>
+                                            <option value="5" selected="selected">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</option>
+                                            <option value="6">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</option>
+                                            <option value="7">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</option>
+                                            <option value="8">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</option>
+                                            <option value="9">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</option>
+                                    </select>
+                            </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+
+        <button type="submit" class="btn btn-primary mb-4" id="dutyManagerSaveBtn">שמירה</button>
+<input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+
+<div id="contactsSection" class="contacts-section">
+    <div class="contacts-head">
+        <h4 class="mb-0">אנשי קשר - מנהלים</h4>
+            <button type="button" class="btn btn-outline-primary btn-sm" id="contactsEditBtn">
+                <i class="bi bi-pencil"></i>
+                ערוך
+            </button>
+    </div>
+
+        <div class="guard-grid contacts-view-only mb-4">
+                <a class="guard-card" href="dutymanager-contact-1.html">
+                    <span class="guard-card__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+                    <span class="guard-card__name">&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;</span>
+                </a>
+                <a class="guard-card" href="dutymanager-contact-2.html">
+                    <span class="guard-card__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+                    <span class="guard-card__name">&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</span>
+                </a>
+                <a class="guard-card" href="dutymanager-contact-3.html">
+                    <span class="guard-card__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+                    <span class="guard-card__name">&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</span>
+                </a>
+                <a class="guard-card" href="dutymanager-contact-4.html">
+                    <span class="guard-card__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+                    <span class="guard-card__name">&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;</span>
+                </a>
+                <a class="guard-card" href="dutymanager-contact-5.html">
+                    <span class="guard-card__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+                    <span class="guard-card__name">&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;</span>
+                </a>
+                <a class="guard-card" href="dutymanager-contact-6.html">
+                    <span class="guard-card__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+                    <span class="guard-card__name">&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;</span>
+                </a>
+                <a class="guard-card" href="dutymanager-contact-7.html">
+                    <span class="guard-card__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+                    <span class="guard-card__name">&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;</span>
+                </a>
+                <a class="guard-card" href="dutymanager-contact-8.html">
+                    <span class="guard-card__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+                    <span class="guard-card__name">&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;</span>
+                </a>
+                <a class="guard-card" href="dutymanager-contact-9.html">
+                    <span class="guard-card__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+                    <span class="guard-card__name">&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;</span>
+                </a>
+        </div>
+
+        <form method="post" id="contactsForm" action="#" data-demo-action="app:/DutyManager/SaveContacts">
+            <div class="table-responsive mb-3 contacts-edit-only contacts-table">
+                <table class="table table-bordered align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>שם</th>
+                            <th>טלפון</th>
+                            <th class="text-center">הסרה</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contactsRows">
+                            <tr class="contact-row">
+                                <td>
+                                    <input type="hidden" name="Contacts[0].ManagerContactId" value="1" />
+                                    <input type="text" name="Contacts[0].FullName" value="&#x5E8;&#x5D5;&#x5E0;&#x5DF; &#x5D0;&#x5DC;&#x5DE;&#x5D5;&#x5D2;"
+                                           class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Contacts[0].Phone" value="050-0000001"
+                                           class="form-control form-control-sm tabular" inputmode="tel" />
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                            title="הסרת המנהל" aria-label="הסרת המנהל">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="contact-row">
+                                <td>
+                                    <input type="hidden" name="Contacts[1].ManagerContactId" value="2" />
+                                    <input type="text" name="Contacts[1].FullName" value="&#x5E9;&#x5D9;&#x5E8;&#x5D4; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;"
+                                           class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Contacts[1].Phone" value="050-0000002"
+                                           class="form-control form-control-sm tabular" inputmode="tel" />
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                            title="הסרת המנהל" aria-label="הסרת המנהל">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="contact-row">
+                                <td>
+                                    <input type="hidden" name="Contacts[2].ManagerContactId" value="3" />
+                                    <input type="text" name="Contacts[2].FullName" value="&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;"
+                                           class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Contacts[2].Phone" value="050-0000003"
+                                           class="form-control form-control-sm tabular" inputmode="tel" />
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                            title="הסרת המנהל" aria-label="הסרת המנהל">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="contact-row">
+                                <td>
+                                    <input type="hidden" name="Contacts[3].ManagerContactId" value="4" />
+                                    <input type="text" name="Contacts[3].FullName" value="&#x5D0;&#x5D9;&#x5EA;&#x5DF; &#x5E1;&#x5E4;&#x5D9;&#x5E8;"
+                                           class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Contacts[3].Phone" value="050-0000004"
+                                           class="form-control form-control-sm tabular" inputmode="tel" />
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                            title="הסרת המנהל" aria-label="הסרת המנהל">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="contact-row">
+                                <td>
+                                    <input type="hidden" name="Contacts[4].ManagerContactId" value="5" />
+                                    <input type="text" name="Contacts[4].FullName" value="&#x5DE;&#x5D9;&#x5DB;&#x5DC; &#x5E8;&#x5D5;&#x5D6;&#x5E0;&#x5D8;&#x5DC;"
+                                           class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Contacts[4].Phone" value="050-0000005"
+                                           class="form-control form-control-sm tabular" inputmode="tel" />
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                            title="הסרת המנהל" aria-label="הסרת המנהל">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="contact-row">
+                                <td>
+                                    <input type="hidden" name="Contacts[5].ManagerContactId" value="6" />
+                                    <input type="text" name="Contacts[5].FullName" value="&#x5E2;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D7;&#x5D5;&#x5DD;"
+                                           class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Contacts[5].Phone" value="050-0000006"
+                                           class="form-control form-control-sm tabular" inputmode="tel" />
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                            title="הסרת המנהל" aria-label="הסרת המנהל">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="contact-row">
+                                <td>
+                                    <input type="hidden" name="Contacts[6].ManagerContactId" value="7" />
+                                    <input type="text" name="Contacts[6].FullName" value="&#x5D9;&#x5D5;&#x5D0;&#x5D1; &#x5DC;&#x5E0;&#x5D3;&#x5D0;&#x5D5;"
+                                           class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Contacts[6].Phone" value="050-0000007"
+                                           class="form-control form-control-sm tabular" inputmode="tel" />
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                            title="הסרת המנהל" aria-label="הסרת המנהל">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="contact-row">
+                                <td>
+                                    <input type="hidden" name="Contacts[7].ManagerContactId" value="8" />
+                                    <input type="text" name="Contacts[7].FullName" value="&#x5D4;&#x5D3;&#x5E1; &#x5E4;&#x5E8;&#x5DC;&#x5DE;&#x5DF;"
+                                           class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Contacts[7].Phone" value="050-0000008"
+                                           class="form-control form-control-sm tabular" inputmode="tel" />
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                            title="הסרת המנהל" aria-label="הסרת המנהל">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="contact-row">
+                                <td>
+                                    <input type="hidden" name="Contacts[8].ManagerContactId" value="9" />
+                                    <input type="text" name="Contacts[8].FullName" value="&#x5D2;&#x5D9;&#x5DC; &#x5E9;&#x5E9;&#x5D5;&#x5DF;"
+                                           class="form-control form-control-sm" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Contacts[8].Phone" value="050-0000009"
+                                           class="form-control form-control-sm tabular" inputmode="tel" />
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                            title="הסרת המנהל" aria-label="הסרת המנהל">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <template id="contactRowTemplate">
+                <tr class="contact-row">
+                    <td>
+                        <input type="hidden" name="Contacts[0].ManagerContactId" value="0" />
+                        <input type="text" name="Contacts[0].FullName" value=""
+                               class="form-control form-control-sm" />
+                    </td>
+                    <td>
+                        <input type="text" name="Contacts[0].Phone" value=""
+                               class="form-control form-control-sm tabular" inputmode="tel" />
+                    </td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-outline-secondary btn-sm contact-remove"
+                                title="הסרת המנהל" aria-label="הסרת המנהל">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </td>
+                </tr>
+            </template>
+
+            <div class="contacts-edit-only contacts-actions mb-4">
+                <button type="button" class="btn btn-outline-primary btn-sm" id="addContactBtn">
+                    <i class="bi bi-plus-lg"></i>
+                    הוספת מנהל
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm" id="contactsSaveBtn">שמור שינויים</button>
+                <a class="btn btn-outline-secondary btn-sm" href="dutymanager.html">ביטול</a>
+            </div>
+            <div class="form-text contacts-edit-only mb-4">
+                מנהל שיוסר יימחק גם מכל התאים שבהם הוא משובץ בסידור העבודה השבועי.
+                שורה שנשארה בלי שם לא תישמר.
+            </div>
+        <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+</div>
+
+    <script>
+        (function () {
+            document.getElementById('dutyManagerForm').addEventListener('submit', function () {
+                var btn = document.getElementById('dutyManagerSaveBtn');
+                btn.disabled = true;
+                btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> שומר...';
+            });
+
+            // --- אנשי קשר: מצב תצוגה עד שנלחץ "ערוך", ואז הוספה/הסרה של שורות ---
+            var section = document.getElementById('contactsSection');
+            var editBtn = document.getElementById('contactsEditBtn');
+            var rowsHost = document.getElementById('contactsRows');
+            var template = document.getElementById('contactRowTemplate');
+
+            editBtn.addEventListener('click', function () {
+                section.classList.add('is-editing');
+                editBtn.hidden = true;
+            });
+
+            // model binding של ASP.NET עוצר באינדקס החסר הראשון, ולכן אחרי כל
+            // שינוי צריך למספר את כל השורות מחדש ברצף.
+            function renumber() {
+                rowsHost.querySelectorAll('.contact-row').forEach(function (row, i) {
+                    row.querySelectorAll('[name]').forEach(function (field) {
+                        field.name = field.name.replace(/Contacts\[\d+\]/, 'Contacts[' + i + ']');
+                    });
+                });
+            }
+
+            document.getElementById('addContactBtn').addEventListener('click', function () {
+                var row = template.content.firstElementChild.cloneNode(true);
+                rowsHost.appendChild(row);
+                renumber();
+                row.querySelector('input[type="text"]').focus();
+            });
+
+            rowsHost.addEventListener('click', function (e) {
+                var btn = e.target.closest('.contact-remove');
+                if (!btn) { return; }
+                btn.closest('.contact-row').remove();
+                renumber();
+            });
+
+            document.getElementById('contactsForm').addEventListener('submit', function () {
+                var btn = document.getElementById('contactsSaveBtn');
+                btn.disabled = true;
+                btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> שומר...';
+            });
+        })();
+    </script>
+
+        </main>
+    </div>
+
+    <footer b-9ud7xt2yc2 class="site-footer text-center py-3">
+        מחלקת ביטחון
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="demo/sphere.js"></script>
+    <script src="demo/data.js"></script>
+    <script src="demo/demo.js"></script>
+</body>
+</html>

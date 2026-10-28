@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#x5D4;&#x5E1;&#x5DE;&#x5DB;&#x5EA; &#x5DE;&#x5E0;&#x5D4;&#x5DC; &#x5EA;&#x5D5;&#x5E8;&#x5DF; - &#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD; - פורטל ביטחון</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="demo/demo.css" />
+</head>
+<body>
+    <header b-9ud7xt2yc2>
+        <nav b-9ud7xt2yc2 class="navbar navbar-expand-sm site-navbar mb-4">
+            <div b-9ud7xt2yc2 class="container-fluid">
+                <a class="navbar-brand" href="home.html">
+                    <img src="assets/images/logo.png" alt="" />
+                    <span b-9ud7xt2yc2>פורטל ביטחון</span>
+                </a>
+                    <div b-9ud7xt2yc2 class="d-flex align-items-center gap-3">
+                        <span b-9ud7xt2yc2 class="user-chip">
+                            <i b-9ud7xt2yc2 class="bi bi-person-circle"></i>
+                            &#x5E0;&#x5D5;&#x5E2;&#x5D4;
+                            (&#x5E7;&#x5D1;&#x5D8;)
+                        </span>
+                        <a class="btn btn-outline-secondary btn-sm" title="החלפת סיסמה" aria-label="החלפת סיסמה" href="account-changepassword.html">
+                            <i b-9ud7xt2yc2 class="bi bi-key"></i>
+                        </a>
+                        <form method="post" class="m-0" action="#" data-demo-action="app:/Account/Logout">
+                            <button b-9ud7xt2yc2 type="submit" class="btn btn-outline-secondary btn-sm">
+                                <i b-9ud7xt2yc2 class="bi bi-box-arrow-left"></i>
+                                התנתקות
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <div b-9ud7xt2yc2 class="container">
+        <main b-9ud7xt2yc2 role="main" class="pb-3">
+            
+<div class="page-head">
+    <h2>הסמכת מנהל תורן - &#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;</h2>
+    <a class="btn btn-outline-secondary btn-sm" href="dutymanager-contact-3.html">
+        <i class="bi bi-arrow-right"></i>
+        חזרה
+    </a>
+</div>
+
+<div class="cert-doc">
+    <iframe src="#demo-unavailable:/DutyManager/CertificationTemplate" title="טופס הסמכת מנהל תורן" class="cert-doc__frame"></iframe>
+    <a href="#demo-unavailable:/DutyManager/CertificationTemplate" target="_blank" rel="noopener" class="cert-doc__open">
+        <i class="bi bi-box-arrow-up-left" aria-hidden="true"></i>
+        פתיחת הטופס בחלון חדש
+    </a>
+</div>
+
+<form method="post" id="certifyForm" novalidate action="#" data-demo-action="app:/DutyManager/Certify/3" data-demo-target="dutymanager-certify-3.html">
+
+    <div class="row g-3 mb-4">
+        <div class="col-sm-6 col-lg-3">
+            <label class="form-label" for="SignedDate">תאריך</label>
+            <input type="date" class="form-control" data-val="true" data-val-required="&#x5D9;&#x5E9; &#x5DC;&#x5D1;&#x5D7;&#x5D5;&#x5E8; &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA;" id="SignedDate" name="SignedDate" value="2026-10-28" /><input name="__Invariant" type="hidden" value="SignedDate" />
+        </div>
+    </div>
+
+    <section class="cert-section">
+        <h3 class="cert-section__title">1. אישור הסמכה - המסמיך/ה</h3>
+        <div class="row g-3">
+            <div class="col-sm-6">
+                <label class="form-label" for="CertifierName">שם המסמיך/ה</label>
+                <input class="form-control" maxlength="150" type="text" data-val="true" data-val-length="The field CertifierName must be a string with a maximum length of 150." data-val-length-max="150" data-val-required="&#x5D9;&#x5E9; &#x5DC;&#x5D4;&#x5D6;&#x5D9;&#x5DF; &#x5D0;&#x5EA; &#x5E9;&#x5DD; &#x5D4;&#x5DE;&#x5E1;&#x5DE;&#x5D9;&#x5DA;" id="CertifierName" name="CertifierName" value="&#x5E0;&#x5D5;&#x5E2;&#x5D4; &#x5D1;&#x5E8;&#x5D2;&#x5E8;" />
+            </div>
+            <div class="col-sm-6">
+                <label class="form-label" for="CertifierRole">תפקיד</label>
+                <input class="form-control" maxlength="100" type="text" data-val="true" data-val-length="The field CertifierRole must be a string with a maximum length of 100." data-val-length-max="100" data-val-required="&#x5D9;&#x5E9; &#x5DC;&#x5D4;&#x5D6;&#x5D9;&#x5DF; &#x5EA;&#x5E4;&#x5E7;&#x5D9;&#x5D3;" id="CertifierRole" name="CertifierRole" value="&#x5E7;&#x5D1;&quot;&#x5D8;" />
+            </div>
+        </div>
+        <div class="sig-pad" data-target="CertifierSignature">
+            <div class="sig-pad__head">
+                <span class="form-label mb-0">חתימה</span>
+                <button type="button" class="btn btn-outline-secondary btn-sm sig-pad__clear">ניקוי</button>
+            </div>
+            <canvas class="sig-pad__canvas" aria-label="לוח חתימה - המסמיך/ה"></canvas>
+            <input type="hidden" data-val="true" data-val-required="&#x5D7;&#x5E1;&#x5E8;&#x5D4; &#x5D7;&#x5EA;&#x5D9;&#x5DE;&#x5EA; &#x5D4;&#x5DE;&#x5E1;&#x5DE;&#x5D9;&#x5DA;" id="CertifierSignature" name="CertifierSignature" value="" />
+        </div>
+    </section>
+
+    <section class="cert-section">
+        <h3 class="cert-section__title">2. הצהרת העובד/ת - מנהל התורן</h3>
+        <div class="row g-3">
+            <div class="col-sm-6">
+                <label class="form-label" for="EmployeeName">שם העובד/ת</label>
+                <input class="form-control" maxlength="150" type="text" data-val="true" data-val-length="The field EmployeeName must be a string with a maximum length of 150." data-val-length-max="150" data-val-required="&#x5D9;&#x5E9; &#x5DC;&#x5D4;&#x5D6;&#x5D9;&#x5DF; &#x5D0;&#x5EA; &#x5E9;&#x5DD; &#x5D4;&#x5E2;&#x5D5;&#x5D1;&#x5D3;" id="EmployeeName" name="EmployeeName" value="&#x5D8;&#x5DC; &#x5D1;&#x5D9;&#x5E8;&#x5E0;&#x5D1;&#x5D0;&#x5D5;&#x5DD;" />
+            </div>
+        </div>
+        <div class="sig-pad" data-target="EmployeeSignature">
+            <div class="sig-pad__head">
+                <span class="form-label mb-0">חתימה</span>
+                <button type="button" class="btn btn-outline-secondary btn-sm sig-pad__clear">ניקוי</button>
+            </div>
+            <canvas class="sig-pad__canvas" aria-label="לוח חתימה - העובד/ת"></canvas>
+            <input type="hidden" data-val="true" data-val-required="&#x5D7;&#x5E1;&#x5E8;&#x5D4; &#x5D7;&#x5EA;&#x5D9;&#x5DE;&#x5EA; &#x5D4;&#x5E2;&#x5D5;&#x5D1;&#x5D3;" id="EmployeeSignature" name="EmployeeSignature" value="" />
+        </div>
+    </section>
+
+    <p class="cert-note">לאחר השמירה לא ניתן להחתים שוב את המנהל.</p>
+    <button type="submit" class="btn btn-primary mb-4" id="certifySaveBtn">שמירת הטופס החתום</button>
+<input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+
+
+        </main>
+    </div>
+
+    <footer b-9ud7xt2yc2 class="site-footer text-center py-3">
+        מחלקת ביטחון
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        (function () {
+            // לוח חתימה: ציור באצבע או בעכבר. בשמירה נשלח PNG חתוך לגבולות החתימה,
+            // כדי שהחתימה תמלא את המקום שלה בטופס גם אם צוירה קטנה.
+            const pads = Array.from(document.querySelectorAll('.sig-pad')).map(function (wrap) {
+                const canvas = wrap.querySelector('canvas');
+                const ctx = canvas.getContext('2d');
+                let drawing = false, empty = true, last = null;
+                let box = null;
+
+                function resize() {
+                    const ratio = window.devicePixelRatio || 1;
+                    const rect = canvas.getBoundingClientRect();
+                    canvas.width = Math.round(rect.width * ratio);
+                    canvas.height = Math.round(rect.height * ratio);
+                    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+                    ctx.lineWidth = 2.2;
+                    ctx.lineCap = 'round';
+                    ctx.lineJoin = 'round';
+                    ctx.strokeStyle = '#1a2a6c';
+                    clear();
+                }
+
+                function clear() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    empty = true;
+                    box = null;
+                    wrap.classList.remove('sig-pad--signed');
+                }
+
+                function point(e) {
+                    const rect = canvas.getBoundingClientRect();
+                    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+                }
+
+                function grow(p) {
+                    box = box
+                        ? { x0: Math.min(box.x0, p.x), y0: Math.min(box.y0, p.y), x1: Math.max(box.x1, p.x), y1: Math.max(box.y1, p.y) }
+                        : { x0: p.x, y0: p.y, x1: p.x, y1: p.y };
+                }
+
+                canvas.addEventListener('pointerdown', function (e) {
+                    e.preventDefault();
+                    canvas.setPointerCapture(e.pointerId);
+                    drawing = true;
+                    last = point(e);
+                    grow(last);
+                    ctx.beginPath();
+                    ctx.arc(last.x, last.y, ctx.lineWidth / 2, 0, Math.PI * 2);
+                    ctx.fillStyle = ctx.strokeStyle;
+                    ctx.fill();
+                    empty = false;
+                    wrap.classList.add('sig-pad--signed');
+                });
+                canvas.addEventListener('pointermove', function (e) {
+                    if (!drawing) return;
+                    const p = point(e);
+                    ctx.beginPath();
+                    ctx.moveTo(last.x, last.y);
+                    ctx.lineTo(p.x, p.y);
+                    ctx.stroke();
+                    last = p;
+                    grow(p);
+                });
+                ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (name) {
+                    canvas.addEventListener(name, function () { drawing = false; });
+                });
+                wrap.querySelector('.sig-pad__clear').addEventListener('click', clear);
+
+                function toPng() {
+                    if (empty || !box) return '';
+                    const ratio = canvas.width / canvas.getBoundingClientRect().width;
+                    const pad = 4;
+                    const x = Math.max(0, Math.floor((box.x0 - pad) * ratio));
+                    const y = Math.max(0, Math.floor((box.y0 - pad) * ratio));
+                    const w = Math.min(canvas.width - x, Math.ceil((box.x1 - box.x0 + pad * 2) * ratio));
+                    const h = Math.min(canvas.height - y, Math.ceil((box.y1 - box.y0 + pad * 2) * ratio));
+                    const out = document.createElement('canvas');
+                    out.width = Math.max(1, w);
+                    out.height = Math.max(1, h);
+                    out.getContext('2d').drawImage(canvas, x, y, w, h, 0, 0, w, h);
+                    return out.toDataURL('image/png');
+                }
+
+                resize();
+                return {
+                    wrap: wrap,
+                    input: document.getElementById(wrap.dataset.target),
+                    isEmpty: function () { return empty; },
+                    toPng: toPng,
+                    resize: resize,
+                };
+            });
+
+            // סיבוב מסך משנה את גודל הלוח ומוחק אותו - עדיף על חתימה מעוותת
+            let lastWidth = window.innerWidth;
+            window.addEventListener('resize', function () {
+                if (window.innerWidth === lastWidth) return;
+                lastWidth = window.innerWidth;
+                pads.forEach(function (p) { p.resize(); });
+            });
+
+            document.getElementById('certifyForm').addEventListener('submit', function (e) {
+                const missing = pads.filter(function (p) { return p.isEmpty(); });
+                if (missing.length > 0) {
+                    e.preventDefault();
+                    alert('חסרה חתימה. שני הצדדים צריכים לחתום לפני השמירה.');
+                    missing[0].wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    return;
+                }
+                pads.forEach(function (p) { p.input.value = p.toPng(); });
+                document.getElementById('certifySaveBtn').disabled = true;
+            });
+        })();
+    </script>
+
+    <script src="demo/sphere.js"></script>
+    <script src="demo/data.js"></script>
+    <script src="demo/demo.js"></script>
+</body>
+</html>

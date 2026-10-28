@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#x5D1;&#x5D9;&#x5E7;&#x5D5;&#x5E8;&#x5EA; &#x5E4;&#x5EA;&#x5E2; &#x5D7;&#x5D3;&#x5E9;&#x5D4; - פורטל ביטחון</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="demo/demo.css" />
+</head>
+<body>
+    <header b-9ud7xt2yc2>
+        <nav b-9ud7xt2yc2 class="navbar navbar-expand-sm site-navbar mb-4">
+            <div b-9ud7xt2yc2 class="container-fluid">
+                <a class="navbar-brand" href="home.html">
+                    <img src="assets/images/logo.png" alt="" />
+                    <span b-9ud7xt2yc2>פורטל ביטחון</span>
+                </a>
+                    <div b-9ud7xt2yc2 class="d-flex align-items-center gap-3">
+                        <span b-9ud7xt2yc2 class="user-chip">
+                            <i b-9ud7xt2yc2 class="bi bi-person-circle"></i>
+                            &#x5E0;&#x5D5;&#x5E2;&#x5D4;
+                            (&#x5E7;&#x5D1;&#x5D8;)
+                        </span>
+                        <a class="btn btn-outline-secondary btn-sm" title="החלפת סיסמה" aria-label="החלפת סיסמה" href="account-changepassword.html">
+                            <i b-9ud7xt2yc2 class="bi bi-key"></i>
+                        </a>
+                        <form method="post" class="m-0" action="#" data-demo-action="app:/Account/Logout">
+                            <button b-9ud7xt2yc2 type="submit" class="btn btn-outline-secondary btn-sm">
+                                <i b-9ud7xt2yc2 class="bi bi-box-arrow-left"></i>
+                                התנתקות
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <div b-9ud7xt2yc2 class="container">
+        <main b-9ud7xt2yc2 role="main" class="pb-3">
+            
+<div class="page-head">
+    <h2>ביקורת פתע חדשה</h2>
+    <a class="btn btn-outline-secondary btn-sm" href="surpriseinspection.html">
+        <i class="bi bi-arrow-right"></i>
+        חזרה לרשימת הביקורות
+    </a>
+</div>
+
+
+    <form method="post" id="inspectionForm" action="#" data-demo-action="app:/SurpriseInspection/Save">
+        <div class="row g-2 mb-3">
+            <div class="col-auto">
+                <label class="form-label">תאריך</label>
+                <input type="date" name="InspectionDate" class="form-control" value="2026-10-28" required />
+            </div>
+            <div class="col-auto">
+                <label class="form-label">שעה</label>
+                <input type="time" name="InspectionTime" class="form-control" value="11:05" required />
+            </div>
+        </div>
+
+            <h4 class="mt-4">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5E9;&#x5D8;&#x5D7; &#x5DB;&#x5DC;&#x5DC;&#x5D9;&#x5EA;</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th style="width:40%">סוג הבדיקה</th>
+                            <th class="text-center">תקין (✔)</th>
+                            <th class="text-center">לא תקין (✖)</th>
+                            <th>הערות</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td class="">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5D4; &#x5D7;&#x5D9;&#x5E6;&#x5D5;&#x5E0;&#x5D9;&#x5EA; &#x5E9;&#x5DC; &#x5D4;&#x5D2;&#x5D3;&#x5E8; &#x5D4;&#x5D4;&#x5D9;&#x5E7;&#x5E4;&#x5D9;&#x5EA;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[0].ChecklistItemId" value="31" />
+                                    <input type="radio" name="Answers[0].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[0].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[0].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5DE;&#x5DE;&#x5E6;&#x5D0;&#x5D9;&#x5DD; &#x5D5;&#x5D7;&#x5E9;&#x5D3; &#x5D7;&#x5D9;&#x5E6;&#x5D5;&#x5E0;&#x5D9;&#x5EA; &#x5DC;&#x5DE;&#x5E1;&#x5D5;&#x5E3;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[1].ChecklistItemId" value="32" />
+                                    <input type="radio" name="Answers[1].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[1].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[1].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5E0;&#x5E2;&#x5D9;&#x5DC;&#x5EA; &#x5E9;&#x5E2;&#x5E8;&#x5D9;&#x5DD; &#x5D7;&#x5D9;&#x5E6;&#x5D5;&#x5E0;&#x5D9;&#x5D9;&#x5DD;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[2].ChecklistItemId" value="33" />
+                                    <input type="radio" name="Answers[2].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[2].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[2].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                                <tr class="checklist-group">
+                                    <td colspan="4">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5D7;&#x5E6;&#x5E8; &#x5E4;&#x5E0;&#x5D9;&#x5DE;&#x5D9;&#x5EA; - &#x5DE;&#x5EA;&#x5D7;&#x5DD; &#x5E8;&#x5D0;&#x5E9;&#x5D9;</td>
+                                </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5D7;&#x5E6;&#x5E8; &#x5DE;&#x5DB;&#x5E1;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[3].ChecklistItemId" value="35" />
+                                    <input type="radio" name="Answers[3].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[3].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[3].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5D7;&#x5E6;&#x5E8; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[4].ChecklistItemId" value="36" />
+                                    <input type="radio" name="Answers[4].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[4].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[4].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5D7;&#x5E6;&#x5E8; &#x5E8;&#x5D9;&#x5E7;&#x5D5;&#x5DF;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[5].ChecklistItemId" value="37" />
+                                    <input type="radio" name="Answers[5].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[5].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[5].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5D7;&#x5E6;&#x5E8; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[6].ChecklistItemId" value="38" />
+                                    <input type="radio" name="Answers[6].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[6].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[6].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                                <tr class="checklist-group">
+                                    <td colspan="4">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5D7;&#x5E6;&#x5E8; &#x5E4;&#x5E0;&#x5D9;&#x5DE;&#x5D9;&#x5EA; - &#x5DE;&#x5D7;&#x5E1;&#x5DF; &#x5E6;&#x5E4;&#x5D5;&#x5E0;&#x5D9;</td>
+                                </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5DE;&#x5E4;&#x5D2;&#x5E2;&#x5D9;&#x5DD;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[7].ChecklistItemId" value="40" />
+                                    <input type="radio" name="Answers[7].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[7].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[7].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5DE;&#x5E4;&#x5EA;&#x5D7;&#x5D5;&#x5EA; &#x5DE;&#x5DB;&#x5D5;&#x5E0;&#x5D9;&#x5D5;&#x5EA; &#x5D7;&#x5D3;&#x5E9;&#x5D5;&#x5EA;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[8].ChecklistItemId" value="41" />
+                                    <input type="radio" name="Answers[8].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[8].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[8].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5D3;&#x5DC;&#x5EA;&#x5D5;&#x5EA; &#x5E1;&#x5D2;&#x5D5;&#x5E8;&#x5D5;&#x5EA;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[9].ChecklistItemId" value="42" />
+                                    <input type="radio" name="Answers[9].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[9].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[9].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5EA;&#x5E8;&#x5D9;&#x5E1;&#x5D9;&#x5DD;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[10].ChecklistItemId" value="43" />
+                                    <input type="radio" name="Answers[10].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[10].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[10].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5D7;&#x5E9;&#x5DE;&#x5DC; &#x2B; &#x5EA;&#x5D0;&#x5D5;&#x5E8;&#x5D4;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[11].ChecklistItemId" value="44" />
+                                    <input type="radio" name="Answers[11].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[11].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[11].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5D2;&#x5D3;&#x5E8; &#x5E4;&#x5E0;&#x5D9;&#x5DE;&#x5D9;&#x5EA; &#x5D0;&#x5D6;&#x5D5;&#x5E8; &#x5D0;&#x5E7;&#x5E8;&#x5D0;&#x5D9;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[12].ChecklistItemId" value="45" />
+                                    <input type="radio" name="Answers[12].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[12].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[12].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5DE;&#x5DE;&#x5E6;&#x5D0;&#x5D9;&#x5DD; &#x5D7;&#x5E8;&#x5D9;&#x5D2;&#x5D9;&#x5DD;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[13].ChecklistItemId" value="46" />
+                                    <input type="radio" name="Answers[13].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[13].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[13].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h4 class="mt-4">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5DE;&#x5D0;&#x5D1;&#x5D8;&#x5D7;&#x5D9;&#x5DD; &#x5D5;&#x5D7;&#x5D3;&#x5E8; &#x5D1;&#x5E7;&#x5E8;&#x5D4;</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th style="width:40%">סוג הבדיקה</th>
+                            <th class="text-center">תקין (✔)</th>
+                            <th class="text-center">לא תקין (✖)</th>
+                            <th>הערות</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                                <td class="">&#x5DE;&#x5D0;&#x5D1;&#x5D8;&#x5D7;&#x5D9;&#x5DD; - &#x5E9;&#x5DE;&#x5D5;&#x5EA;, &#x5D4;&#x5D5;&#x5E4;&#x5E2;&#x5D4;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[14].ChecklistItemId" value="47" />
+                                    <input type="radio" name="Answers[14].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[14].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[14].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                                <tr class="checklist-group">
+                                    <td colspan="4">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5E6;&#x5D9;&#x5D5;&#x5D3;</td>
+                                </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5E4;&#x5E0;&#x5E1;&#x5D9;&#x5DD;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[15].ChecklistItemId" value="49" />
+                                    <input type="radio" name="Answers[15].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[15].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[15].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[16].ChecklistItemId" value="50" />
+                                    <input type="radio" name="Answers[16].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[16].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[16].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5DE;&#x5DB;&#x5E9;&#x5D9;&#x5E8; &#x5E4;&#x5DC;&#x5D0;&#x5E4;&#x5D5;&#x5DF; &#x5DE;&#x5D7;&#x5D5;&#x5D1;&#x5E8; &#x5DC;&#x5DE;&#x5D5;&#x5E7;&#x5D3;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[17].ChecklistItemId" value="51" />
+                                    <input type="radio" name="Answers[17].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[17].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[17].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                                <tr class="checklist-group">
+                                    <td colspan="4">&#x5DE;&#x5E2;&#x5E8;&#x5DB;&#x5D5;&#x5EA; &#x5EA;&#x5E7;&#x5D9;&#x5E0;&#x5D5;&#x5EA;</td>
+                                </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5D8;&#x5DE;&quot;&#x5E1;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[18].ChecklistItemId" value="53" />
+                                    <input type="radio" name="Answers[18].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[18].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[18].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5DE;&#x5E2;&#x5E8;&#x5DB;&#x5EA; &#x5D0;&#x5D6;&#x5E2;&#x5E7;&#x5D4;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[19].ChecklistItemId" value="54" />
+                                    <input type="radio" name="Answers[19].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[19].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[19].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5D8;&#x5DC;&#x5E4;&#x5D5;&#x5E0;&#x5D9;&#x5DD;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[20].ChecklistItemId" value="55" />
+                                    <input type="radio" name="Answers[20].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[20].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[20].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="checklist-child">&#x5DC;&#x5D5;&#x5D7; &#x5D8;&#x5D1;&#x5DC;&#x5D0;&#x5D5;&#x5EA;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[21].ChecklistItemId" value="56" />
+                                    <input type="radio" name="Answers[21].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[21].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[21].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5E1;&#x5D9;&#x5D5;&#x5E8;&#x5D9;&#x5DD; &#x5DC;&#x5E4;&#x5D9; &#x5EA;&#x5DB;&#x5E0;&#x5D5;&#x5DF;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[22].ChecklistItemId" value="57" />
+                                    <input type="radio" name="Answers[22].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[22].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[22].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5D1;&#x5D9;&#x5E6;&#x5D5;&#x5E2; &#x5DC;&#x5E4;&#x5D9; &#x5E0;&#x5E7;&#x5D5;&#x5D3;&#x5D5;&#x5EA; &#x5E1;&#x5D9;&#x5D5;&#x5E8;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[23].ChecklistItemId" value="58" />
+                                    <input type="radio" name="Answers[23].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[23].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[23].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="">&#x5D1;&#x5D3;&#x5D9;&#x5E7;&#x5EA; &#x5E8;&#x5D9;&#x5E9;&#x5D5;&#x5DD; &#x5D1;&#x5D9;&#x5D5;&#x5DE;&#x5DF; &#x5D0;&#x5D9;&#x5E8;&#x5D5;&#x5E2;&#x5D9;&#x5DD;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[24].ChecklistItemId" value="59" />
+                                    <input type="radio" name="Answers[24].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[24].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[24].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="">&#x5EA;&#x5E9;&#x5D0;&#x5D5;&#x5DC; &#x5DE;&#x5D0;&#x5D1;&#x5D8;&#x5D7;&#x5D9;&#x5DD;, &#x5DE;&#x5E7;&#x5E8;&#x5D9;&#x5DD; &#x5D5;&#x5EA;&#x5D2;&#x5D5;&#x5D1;&#x5D5;&#x5EA;</td>
+                                <td class="text-center">
+                                    <input type="hidden" name="Answers[25].ChecklistItemId" value="60" />
+                                    <input type="radio" name="Answers[25].Status" value="Ok" />
+                                </td>
+                                <td class="text-center">
+                                    <input type="radio" name="Answers[25].Status" value="NotOk" />
+                                </td>
+                                <td>
+                                    <input type="text" name="Answers[25].Notes" class="form-control form-control-sm" maxlength="500" />
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        <h4 class="mt-4">הערות מנהל ביטחון לביקורת</h4>
+        <textarea name="ManagerNotes" class="form-control mb-3" rows="4" maxlength="2000"></textarea>
+
+        <button type="submit" class="btn btn-primary" id="inspectionSaveBtn">שמירת הביקורת</button>
+    <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+    <script>
+        // סעיף שסומן בטעות - לחיצה חוזרת על אותו כפתור מנקה את הסימון,
+        // אחרת אי אפשר להחזיר שורה למצב "לא נבדק" בלי לרענן את הטופס.
+        document.querySelectorAll('#inspectionForm input[type=radio]').forEach(function (radio) {
+            radio.addEventListener('click', function () {
+                if (radio.dataset.wasChecked === 'true') {
+                    radio.checked = false;
+                    radio.dataset.wasChecked = 'false';
+                    return;
+                }
+                var group = document.getElementsByName(radio.name);
+                for (var i = 0; i < group.length; i++) {
+                    group[i].dataset.wasChecked = 'false';
+                }
+                radio.dataset.wasChecked = 'true';
+            });
+        });
+
+        document.getElementById('inspectionForm').addEventListener('submit', function (e) {
+            if (!confirm('לאחר השמירה לא ניתן יהיה לערוך את הביקורת. להמשיך?')) {
+                e.preventDefault();
+                return;
+            }
+            var btn = document.getElementById('inspectionSaveBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> שומר...';
+        });
+    </script>
+
+        </main>
+    </div>
+
+    <footer b-9ud7xt2yc2 class="site-footer text-center py-3">
+        מחלקת ביטחון
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="demo/sphere.js"></script>
+    <script src="demo/data.js"></script>
+    <script src="demo/demo.js"></script>
+</body>
+</html>

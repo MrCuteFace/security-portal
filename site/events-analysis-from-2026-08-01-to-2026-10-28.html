@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#x5E0;&#x5D9;&#x5EA;&#x5D5;&#x5D7; &#x5D0;&#x5D9;&#x5E8;&#x5D5;&#x5E2;&#x5D9;&#x5DD; - פורטל ביטחון</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="demo/demo.css" />
+</head>
+<body>
+    <header b-9ud7xt2yc2>
+        <nav b-9ud7xt2yc2 class="navbar navbar-expand-sm site-navbar mb-4">
+            <div b-9ud7xt2yc2 class="container-fluid">
+                <a class="navbar-brand" href="home.html">
+                    <img src="assets/images/logo.png" alt="" />
+                    <span b-9ud7xt2yc2>פורטל ביטחון</span>
+                </a>
+                    <div b-9ud7xt2yc2 class="d-flex align-items-center gap-3">
+                        <span b-9ud7xt2yc2 class="user-chip">
+                            <i b-9ud7xt2yc2 class="bi bi-person-circle"></i>
+                            &#x5E0;&#x5D5;&#x5E2;&#x5D4;
+                            (&#x5E7;&#x5D1;&#x5D8;)
+                        </span>
+                        <a class="btn btn-outline-secondary btn-sm" title="החלפת סיסמה" aria-label="החלפת סיסמה" href="account-changepassword.html">
+                            <i b-9ud7xt2yc2 class="bi bi-key"></i>
+                        </a>
+                        <form method="post" class="m-0" action="#" data-demo-action="app:/Account/Logout">
+                            <button b-9ud7xt2yc2 type="submit" class="btn btn-outline-secondary btn-sm">
+                                <i b-9ud7xt2yc2 class="bi bi-box-arrow-left"></i>
+                                התנתקות
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <div b-9ud7xt2yc2 class="container">
+        <main b-9ud7xt2yc2 role="main" class="pb-3">
+            
+<div class="page-head">
+    <h2>ניתוח אירועים</h2>
+    <a class="btn btn-outline-secondary btn-sm" href="events.html">
+        <i class="bi bi-arrow-right"></i>
+        חזרה לדו"ח אירועים
+    </a>
+</div>
+
+<form method="get" class="row g-2 align-items-end mb-2" action="#" data-demo-action="app:/Events/Analysis" data-demo-target="events-analysis.html">
+    <div class="col-auto">
+        <label class="form-label" for="from">מתאריך</label>
+        <input type="date" id="from" name="from" class="form-control" value="2026-08-01" />
+    </div>
+    <div class="col-auto">
+        <label class="form-label" for="to">עד תאריך</label>
+        <input type="date" id="to" name="to" class="form-control" value="2026-10-28" />
+    </div>
+    <div class="col-auto">
+        <label class="form-label" for="eventType">סוג אירוע</label>
+        <select id="eventType" name="eventType" class="form-select">
+            <option value="">הכל</option>
+                <option value="&#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA;">&#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA;</option>
+                <option value="&#x5D7;&#x5E8;&#x5D9;&#x5D2;">&#x5D7;&#x5E8;&#x5D9;&#x5D2;</option>
+                <option value="&#x5D7;&#x5D5;&#x5DE;&#x5E8;&#x5D9;&#x5DD; &#x5DE;&#x5E1;&#x5D5;&#x5DB;&#x5E0;&#x5D9;&#x5DD;">&#x5D7;&#x5D5;&#x5DE;&#x5E8;&#x5D9;&#x5DD; &#x5DE;&#x5E1;&#x5D5;&#x5DB;&#x5E0;&#x5D9;&#x5DD;</option>
+        </select>
+    </div>
+    <div class="col-auto">
+        <label class="form-label" for="department">מחלקה</label>
+        <select id="department" name="department" class="form-select">
+            <option value="">הכל</option>
+                <option value="&#x5D4;&#x5E0;&#x5D4;&#x5DC;&#x5D4; &#x5E8;&#x5D0;&#x5E9;&#x5D9;&#x5EA;">&#x5D4;&#x5E0;&#x5D4;&#x5DC;&#x5D4; &#x5E8;&#x5D0;&#x5E9;&#x5D9;&#x5EA;</option>
+                <option value="&#x5DE;&#x5DB;&#x5D9;&#x5E8;&#x5D5;&#x5EA; &#x5D5;&#x5E9;&#x5D9;&#x5E8;&#x5D5;&#x5EA; &#x5DC;&#x5E7;&#x5D5;&#x5D7;&#x5D5;&#x5EA;">&#x5DE;&#x5DB;&#x5D9;&#x5E8;&#x5D5;&#x5EA; &#x5D5;&#x5E9;&#x5D9;&#x5E8;&#x5D5;&#x5EA; &#x5DC;&#x5E7;&#x5D5;&#x5D7;&#x5D5;&#x5EA;</option>
+                <option value="&#x5DB;&#x5E1;&#x5E4;&#x5D9;&#x5DD;">&#x5DB;&#x5E1;&#x5E4;&#x5D9;&#x5DD;</option>
+                <option value="&#x5DE;&#x5E0;&#x5D4;&#x5DC;&#x5D4;">&#x5DE;&#x5E0;&#x5D4;&#x5DC;&#x5D4;</option>
+                <option value="&#x5DE;&#x5E2;&#x5E8;&#x5DB;&#x5D5;&#x5EA; &#x5DE;&#x5D9;&#x5D3;&#x5E2;">&#x5DE;&#x5E2;&#x5E8;&#x5DB;&#x5D5;&#x5EA; &#x5DE;&#x5D9;&#x5D3;&#x5E2;</option>
+                <option value="&#x5DE;&#x5E9;&#x5D0;&#x5D1;&#x5D9; &#x5D0;&#x5E0;&#x5D5;&#x5E9;">&#x5DE;&#x5E9;&#x5D0;&#x5D1;&#x5D9; &#x5D0;&#x5E0;&#x5D5;&#x5E9;</option>
+                <option value="&#x5E8;&#x5D9;&#x5E7;&#x5D5;&#x5DF; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;">&#x5E8;&#x5D9;&#x5E7;&#x5D5;&#x5DF; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;</option>
+                <option value="&#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; &#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;">&#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; &#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;</option>
+                <option value="&#x5E7;&#x5DC;&#x5D9;&#x5D8;&#x5EA; &#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;">&#x5E7;&#x5DC;&#x5D9;&#x5D8;&#x5EA; &#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;</option>
+                <option value="&#x5E1;&#x5DB;&#x5DB;&#x5EA; &#x5DE;&#x5DB;&#x5E1;">&#x5E1;&#x5DB;&#x5DB;&#x5EA; &#x5DE;&#x5DB;&#x5E1;</option>
+                <option value="&#x5E8;&#x5DB;&#x5D1;&#x5D9;&#x5DD;">&#x5E8;&#x5DB;&#x5D1;&#x5D9;&#x5DD;</option>
+                <option value="&#x5D7;&#x5E6;&#x5E8; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;">&#x5D7;&#x5E6;&#x5E8; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;</option>
+                <option value="&#x5E9;&#x5E2;&#x5E8;&#x5D9;&#x5DD;">&#x5E9;&#x5E2;&#x5E8;&#x5D9;&#x5DD;</option>
+                <option value="&#x5E1;&#x5D9;&#x5D3;&#x5D5;&#x5E8; &#x5E2;&#x5D1;&#x5D5;&#x5D3;&#x5D4;">&#x5E1;&#x5D9;&#x5D3;&#x5D5;&#x5E8; &#x5E2;&#x5D1;&#x5D5;&#x5D3;&#x5D4;</option>
+                <option value="&#x5DE;&#x5D5;&#x5E1;&#x5DA;">&#x5DE;&#x5D5;&#x5E1;&#x5DA;</option>
+                <option value="&#x5DE;&#x5D7;&#x5E1;&#x5DF; &#x5E6;&#x5E4;&#x5D5;&#x5E0;&#x5D9;">&#x5DE;&#x5D7;&#x5E1;&#x5DF; &#x5E6;&#x5E4;&#x5D5;&#x5E0;&#x5D9;</option>
+                <option value="&#x5E8;&#x5DB;&#x5E9; &#x5D5;&#x5EA;&#x5D7;&#x5D6;&#x5D5;&#x5E7;&#x5D4;">&#x5E8;&#x5DB;&#x5E9; &#x5D5;&#x5EA;&#x5D7;&#x5D6;&#x5D5;&#x5E7;&#x5D4;</option>
+        </select>
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">הצג</button>
+    </div>
+    <div class="col-auto">
+        <a class="btn btn-outline-secondary" href="events-analysis.html">ניקוי</a>
+    </div>
+</form>
+
+<div class="range-presets mb-4">
+        <a class="range-preset " href="events-analysis-from-2026-09-29-to-2026-10-28.html">30 &#x5D4;&#x5D9;&#x5DE;&#x5D9;&#x5DD; &#x5D4;&#x5D0;&#x5D7;&#x5E8;&#x5D5;&#x5E0;&#x5D9;&#x5DD;</a>
+        <a class="range-preset is-active" href="events-analysis-from-2026-08-01-to-2026-10-28.html">3 &#x5D7;&#x5D5;&#x5D3;&#x5E9;&#x5D9;&#x5DD;</a>
+        <a class="range-preset " href="events-analysis-from-2025-11-01-to-2026-10-28.html">12 &#x5D7;&#x5D5;&#x5D3;&#x5E9;&#x5D9;&#x5DD;</a>
+        <a class="range-preset " href="events-analysis-from-2026-01-01-to-2026-10-28.html">&#x5D4;&#x5E9;&#x5E0;&#x5D4; &#x5D4;&#x5E0;&#x5D5;&#x5DB;&#x5D7;&#x5D9;&#x5EA;</a>
+</div>
+
+    <div class="kpi-grid">
+        <div class="kpi">
+            <span class="kpi__value tabular">14</span>
+            <span class="kpi__label">סך האירועים בתקופה</span>
+            <span class="kpi__hint tabular">01/08/2026 - 28/10/2026</span>
+        </div>
+        <div class="kpi kpi--safety">
+            <span class="kpi__value tabular">7</span>
+            <span class="kpi__label">אירועי בטיחות</span>
+            <span class="kpi__hint">50% מהאירועים</span>
+        </div>
+        <div class="kpi kpi--exceptional">
+            <span class="kpi__value tabular">5</span>
+            <span class="kpi__label">אירועים חריגים</span>
+            <span class="kpi__hint">36% מהאירועים</span>
+        </div>
+        <div class="kpi kpi--hazmat">
+            <span class="kpi__value tabular">2</span>
+            <span class="kpi__label">אירועי חומרים מסוכנים</span>
+            <span class="kpi__hint">14% מהאירועים</span>
+        </div>
+        <div class="kpi">
+            <span class="kpi__value tabular">4.8</span>
+            <span class="kpi__label">ממוצע אירועים לחודש</span>
+            <span class="kpi__hint tabular">
+                &#x5D0;&#x5D9;&#x5E8;&#x5D5;&#x5E2; &#x5D0;&#x5D7;&#x5E8;&#x5D5;&#x5DF;: 27/10/2026
+            </span>
+        </div>
+        <div class="kpi">
+            <span class="kpi__value tabular">0</span>
+            <span class="kpi__label">עם דו"ח ממונה בטיחות</span>
+            <span class="kpi__hint">0% מהאירועים בתקופה</span>
+        </div>
+    </div>
+    <section class="analysis-panel">
+        <div class="analysis-panel__head">
+            <h3 class="analysis-panel__title">&#x5D0;&#x5D9;&#x5E8;&#x5D5;&#x5E2;&#x5D9;&#x5DD; &#x5DC;&#x5E4;&#x5D9; &#x5D7;&#x5D5;&#x5D3;&#x5E9;</h3>
+            <div class="legend">
+                <span class="legend__item"><span class="legend__swatch legend__swatch--safety"></span>בטיחות</span>
+                <span class="legend__item"><span class="legend__swatch legend__swatch--exceptional"></span>חריג</span>
+                <span class="legend__item"><span class="legend__swatch legend__swatch--hazmat"></span>חומרים מסוכנים</span>
+            </div>
+        </div>
+
+        <div class="trend">
+                <div class="trend__col" title="08/26 - סה&quot;כ 0 (בטיחות 0, חריג 0, חומרים מסוכנים 0)">
+                    <span class="trend__total tabular"></span>
+                    <div class="trend__bar">
+                        <div class="trend__stack" style="height:0%">
+                            <div class="trend__seg trend__seg--hazmat" style="flex-grow:0"></div>
+                            <div class="trend__seg trend__seg--exceptional" style="flex-grow:0"></div>
+                            <div class="trend__seg trend__seg--safety" style="flex-grow:0"></div>
+                        </div>
+                    </div>
+                    <span class="trend__label tabular">08/26</span>
+                </div>
+                <div class="trend__col" title="09/26 - סה&quot;כ 4 (בטיחות 2, חריג 1, חומרים מסוכנים 1)">
+                    <span class="trend__total tabular">4</span>
+                    <div class="trend__bar">
+                        <div class="trend__stack" style="height:40%">
+                            <div class="trend__seg trend__seg--hazmat" style="flex-grow:1"></div>
+                            <div class="trend__seg trend__seg--exceptional" style="flex-grow:1"></div>
+                            <div class="trend__seg trend__seg--safety" style="flex-grow:2"></div>
+                        </div>
+                    </div>
+                    <span class="trend__label tabular">09/26</span>
+                </div>
+                <div class="trend__col" title="10/26 - סה&quot;כ 10 (בטיחות 5, חריג 4, חומרים מסוכנים 1) - &#x5EA;&#x5E7;&#x5D5;&#x5E4;&#x5D4; &#x5D7;&#x5DC;&#x5E7;&#x5D9;&#x5EA;">
+                    <span class="trend__total tabular">10</span>
+                    <div class="trend__bar">
+                        <div class="trend__stack" style="height:100%">
+                            <div class="trend__seg trend__seg--hazmat" style="flex-grow:1"></div>
+                            <div class="trend__seg trend__seg--exceptional" style="flex-grow:4"></div>
+                            <div class="trend__seg trend__seg--safety" style="flex-grow:5"></div>
+                        </div>
+                    </div>
+                    <span class="trend__label tabular">10/26*</span>
+                </div>
+        </div>
+
+            <p class="analysis-panel__note">* תקופה שהטווח הנבחר מכסה רק בחלקה, ולכן העמודה נמוכה מהתמונה המלאה.</p>
+    </section>
+    <div class="analysis-grid">
+        <section class="analysis-panel">
+            <h3 class="analysis-panel__title">פילוח לפי סיווג</h3>
+            <ul class="bar-list">
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E0;&#x5D6;&#x5E7; &#x5DC;&#x5E8;&#x5DB;&#x5D5;&#x5E9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:100%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">2</span>
+                            <span class="bar-row__share">14.3%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E1;&#x5D9;&#x5DB;&#x5D5;&#x5DF; &#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA;&#x5D9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:100%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">2</span>
+                            <span class="bar-row__share">14.3%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E4;&#x5D2;&#x5D9;&#x5E2;&#x5D4; &#x5D1;&#x5D2;&#x5D5;&#x5E3;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:100%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">2</span>
+                            <span class="bar-row__share">14.3%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5D0;&#x5D7;&#x5E8;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:50%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5D0;&#x5DC;&#x5D9;&#x5DE;&#x5D5;&#x5EA; &#x5DE;&#x5D9;&#x5DC;&#x5D5;&#x5DC;&#x5D9;&#x5EA;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:50%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5D0;&#x5DC;&#x5D9;&#x5DE;&#x5D5;&#x5EA; &#x5E4;&#x5D9;&#x5D6;&#x5D9;&#x5EA;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:50%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5D2;&#x5E0;&#x5D9;&#x5D1;&#x5D4;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:50%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5D4;&#x5E4;&#x5E8;&#x5EA; &#x5E0;&#x5D5;&#x5D4;&#x5DC;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:50%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5D7;&#x5D5;&#x5DE;&#x5E8; &#x5DE;&#x5D5;&#x5E6;&#x5E7;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:50%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5D7;&#x5D5;&#x5DE;&#x5E8; &#x5E0;&#x5D5;&#x5D6;&#x5DC;&#x5D9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:50%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E1;&#x5D3;&#x5E8; &#x5E6;&#x5D9;&#x5D1;&#x5D5;&#x5E8;&#x5D9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:50%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+            </ul>
+        </section>
+
+        <section class="analysis-panel">
+            <h3 class="analysis-panel__title">פילוח לפי מחלקה</h3>
+            <ul class="bar-list">
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5D7;&#x5E6;&#x5E8; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:100%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">3</span>
+                            <span class="bar-row__share">21.4%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E8;&#x5D9;&#x5E7;&#x5D5;&#x5DF; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:66.7%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">2</span>
+                            <span class="bar-row__share">14.3%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E9;&#x5E2;&#x5E8;&#x5D9;&#x5DD;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:66.7%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">2</span>
+                            <span class="bar-row__share">14.3%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5DE;&#x5D5;&#x5E1;&#x5DA;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:33.3%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5DE;&#x5D7;&#x5E1;&#x5DF; &#x5E6;&#x5E4;&#x5D5;&#x5E0;&#x5D9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:33.3%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5DE;&#x5DB;&#x5D9;&#x5E8;&#x5D5;&#x5EA; &#x5D5;&#x5E9;&#x5D9;&#x5E8;&#x5D5;&#x5EA; &#x5DC;&#x5E7;&#x5D5;&#x5D7;&#x5D5;&#x5EA;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:33.3%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E1;&#x5DB;&#x5DB;&#x5EA; &#x5DE;&#x5DB;&#x5E1;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:33.3%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E7;&#x5DC;&#x5D9;&#x5D8;&#x5EA; &#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:33.3%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E8;&#x5DB;&#x5E9; &#x5D5;&#x5EA;&#x5D7;&#x5D6;&#x5D5;&#x5E7;&#x5D4;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:33.3%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; &#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:33.3%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+            </ul>
+        </section>
+
+        <section class="analysis-panel">
+            <h3 class="analysis-panel__title">גורמים מעורבים</h3>
+                <ul class="bar-list">
+                        <li class="bar-row">
+                            <span class="bar-row__label">&#x5E4;&#x5E0;&#x5D9;&#x5DD; &#x5D0;&#x5E8;&#x5D2;&#x5D5;&#x5E0;&#x5D9;</span>
+                            <span class="bar-row__track"><span class="bar-row__fill" style="width:100%"></span></span>
+                            <span class="bar-row__value tabular">
+                                <span class="bar-row__count">14</span>
+                                <span class="bar-row__share">73.7%</span>
+                            </span>
+                        </li>
+                        <li class="bar-row">
+                            <span class="bar-row__label">&#x5D7;&#x5D9;&#x5E6;&#x5D5;&#x5E0;&#x5D9; - &#x5E7;&#x5D1;&#x5DC;&#x5DF;</span>
+                            <span class="bar-row__track"><span class="bar-row__fill" style="width:21.4%"></span></span>
+                            <span class="bar-row__value tabular">
+                                <span class="bar-row__count">3</span>
+                                <span class="bar-row__share">15.8%</span>
+                            </span>
+                        </li>
+                        <li class="bar-row">
+                            <span class="bar-row__label">&#x5D7;&#x5D9;&#x5E6;&#x5D5;&#x5E0;&#x5D9; - &#x5DC;&#x5E7;&#x5D5;&#x5D7;</span>
+                            <span class="bar-row__track"><span class="bar-row__fill" style="width:7.1%"></span></span>
+                            <span class="bar-row__value tabular">
+                                <span class="bar-row__count">1</span>
+                                <span class="bar-row__share">5.3%</span>
+                            </span>
+                        </li>
+                        <li class="bar-row">
+                            <span class="bar-row__label">&#x5D7;&#x5D9;&#x5E6;&#x5D5;&#x5E0;&#x5D9; - &#x5E1;&#x5E4;&#x5E7;</span>
+                            <span class="bar-row__track"><span class="bar-row__fill" style="width:7.1%"></span></span>
+                            <span class="bar-row__value tabular">
+                                <span class="bar-row__count">1</span>
+                                <span class="bar-row__share">5.3%</span>
+                            </span>
+                        </li>
+                </ul>
+                <p class="analysis-panel__note">הספירה היא של גורמים מעורבים; באירוע אחד יכולים להיות כמה.</p>
+        </section>
+
+        <section class="analysis-panel">
+            <h3 class="analysis-panel__title">פילוח לפי יום בשבוע</h3>
+            <ul class="bar-list">
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E8;&#x5D0;&#x5E9;&#x5D5;&#x5DF;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:20%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E9;&#x5E0;&#x5D9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:20%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">1</span>
+                            <span class="bar-row__share">7.1%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E9;&#x5DC;&#x5D9;&#x5E9;&#x5D9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:60%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">3</span>
+                            <span class="bar-row__share">21.4%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E8;&#x5D1;&#x5D9;&#x5E2;&#x5D9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:0%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">0</span>
+                            <span class="bar-row__share">0%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5D7;&#x5DE;&#x5D9;&#x5E9;&#x5D9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:100%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">5</span>
+                            <span class="bar-row__share">35.7%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E9;&#x5D9;&#x5E9;&#x5D9;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:40%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">2</span>
+                            <span class="bar-row__share">14.3%</span>
+                        </span>
+                    </li>
+                    <li class="bar-row">
+                        <span class="bar-row__label">&#x5E9;&#x5D1;&#x5EA;</span>
+                        <span class="bar-row__track"><span class="bar-row__fill" style="width:40%"></span></span>
+                        <span class="bar-row__value tabular">
+                            <span class="bar-row__count">2</span>
+                            <span class="bar-row__share">14.3%</span>
+                        </span>
+                    </li>
+            </ul>
+        </section>
+    </div>
+
+        </main>
+    </div>
+
+    <footer b-9ud7xt2yc2 class="site-footer text-center py-3">
+        מחלקת ביטחון
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="demo/sphere.js"></script>
+    <script src="demo/data.js"></script>
+    <script src="demo/demo.js"></script>
+</body>
+</html>

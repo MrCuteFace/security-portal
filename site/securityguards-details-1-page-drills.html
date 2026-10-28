@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#x5E6;&#x5D5;&#x5D5;&#x5EA; &#x5D0;&#x5D1;&#x5D8;&#x5D7;&#x5D4; - &#x5D0;&#x5DC;&#x5D9; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9; - פורטל ביטחון</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="demo/demo.css" />
+</head>
+<body>
+    <header b-9ud7xt2yc2>
+        <nav b-9ud7xt2yc2 class="navbar navbar-expand-sm site-navbar mb-4">
+            <div b-9ud7xt2yc2 class="container-fluid">
+                <a class="navbar-brand" href="home.html">
+                    <img src="assets/images/logo.png" alt="" />
+                    <span b-9ud7xt2yc2>פורטל ביטחון</span>
+                </a>
+                    <div b-9ud7xt2yc2 class="d-flex align-items-center gap-3">
+                        <span b-9ud7xt2yc2 class="user-chip">
+                            <i b-9ud7xt2yc2 class="bi bi-person-circle"></i>
+                            &#x5E0;&#x5D5;&#x5E2;&#x5D4;
+                            (&#x5E7;&#x5D1;&#x5D8;)
+                        </span>
+                        <a class="btn btn-outline-secondary btn-sm" title="החלפת סיסמה" aria-label="החלפת סיסמה" href="account-changepassword.html">
+                            <i b-9ud7xt2yc2 class="bi bi-key"></i>
+                        </a>
+                        <form method="post" class="m-0" action="#" data-demo-action="app:/Account/Logout">
+                            <button b-9ud7xt2yc2 type="submit" class="btn btn-outline-secondary btn-sm">
+                                <i b-9ud7xt2yc2 class="bi bi-box-arrow-left"></i>
+                                התנתקות
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <div b-9ud7xt2yc2 class="container">
+        <main b-9ud7xt2yc2 role="main" class="pb-3">
+            
+<div class="page-head">
+    <h2 class="guard-title">
+        <span class="guard-title__avatar" aria-hidden="true"><i class="bi bi-person-fill"></i></span>
+        &#x5D0;&#x5DC;&#x5D9; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;
+    </h2>
+    <a class="btn btn-outline-secondary btn-sm" href="securityguards.html">
+        <i class="bi bi-arrow-right"></i>
+        חזרה לרשימת המאבטחים
+    </a>
+</div>
+
+
+<div class="guard-folder">
+    <nav class="guard-tabs nav flex-column" role="tablist" aria-label="עמודי התיקייה">
+        <button type="button" class="guard-tabs__link active"
+                data-bs-toggle="tab" data-bs-target="#pane-Personal" data-tab="Personal"
+                role="tab" aria-selected="true">
+            <i class="bi bi-person-vcard"></i>
+            נתונים אישיים
+        </button>
+            <button type="button" class="guard-tabs__link "
+                    data-bs-toggle="tab" data-bs-target="#pane-Terminal" data-tab="Terminal"
+                    role="tab" aria-selected="false">
+                <i class="bi bi-signpost-split"></i>
+                &#x5D4;&#x5DB;&#x5E8;&#x5D5;&#x5EA; &#x5E2;&#x5DE;&#x5D3;&#x5D5;&#x5EA; - &#x5DE;&#x5E1;&#x5D5;&#x5E3;
+            </button>
+            <button type="button" class="guard-tabs__link "
+                    data-bs-toggle="tab" data-bs-target="#pane-Security" data-tab="Security"
+                    role="tab" aria-selected="false">
+                <i class="bi bi-shield-check"></i>
+                &#x5D4;&#x5DB;&#x5E8;&#x5D5;&#x5EA; &#x5E2;&#x5DE;&#x5D3;&#x5D5;&#x5EA; - &#x5D1;&#x5D9;&#x5D8;&#x5D7;&#x5D5;&#x5DF;
+            </button>
+            <button type="button" class="guard-tabs__link "
+                    data-bs-toggle="tab" data-bs-target="#pane-Drills" data-tab="Drills"
+                    role="tab" aria-selected="false">
+                <i class="bi bi-journal-check"></i>
+                &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;&#x5D9;&#x5DD;, &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D5;&#x5EA; &#x5D5;&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5D5;&#x5EA;
+            </button>
+    </nav>
+
+    <div class="tab-content guard-panes">
+        <section class="tab-pane guard-pane show active"
+                 id="pane-Personal" role="tabpanel">
+            <div class="guard-pane__head">
+                <h4>נתונים אישיים</h4>
+                <button type="button" class="btn btn-outline-primary btn-sm" data-edit-open>
+                    <i class="bi bi-pencil"></i>
+                    עריכה
+                </button>
+            </div>
+
+            <div data-view>
+                <dl class="guard-facts">
+                    <div>
+                        <dt>שם ושם משפחה</dt>
+                        <dd>&#x5D0;&#x5DC;&#x5D9; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;</dd>
+                    </div>
+                    <div>
+                        <dt>תפקיד</dt>
+                        <dd>&#x5DE;&#x5E0;&#x5D4;&#x5DC; &#x5E9;&#x5E2;&#x5E8;&#x5D9;&#x5DD;</dd>
+                    </div>
+                    <div>
+                        <dt>ת.ז.</dt>
+                        <dd class="tabular">&#x200E;*****0011</dd>
+                    </div>
+                    <div>
+                        <dt>ותק בעבודה</dt>
+                        <dd>
+3 &#x5E9;&#x5E0;&#x5D9;&#x5DD; &#x5D5;-4 &#x5D7;&#x5D5;&#x5D3;&#x5E9;&#x5D9;&#x5DD;                                <span class="guard-facts__sub tabular">מ-28/06/2023</span>
+                        </dd>
+                    </div>
+                    <div>
+                        <dt>הוסמך בתאריך</dt>
+                        <dd class="tabular">
+28/07/2023                        </dd>
+                    </div>
+                </dl>
+
+                <div class="guard-status">
+                        <form method="post" class="m-0" data-confirm="להוציא את &#x5D0;&#x5DC;&#x5D9; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9; מרשימת המאבטחים? התיקייה תישמר, ואפשר יהיה להחזיר אותו." action="#" data-demo-action="app:/SecurityGuards/SetActive">
+                            <input type="hidden" name="id" value="1" />
+                            <input type="hidden" name="active" value="false" />
+                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                <i class="bi bi-person-dash"></i>
+                                הוצאה מהרשימה
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+                </div>
+            </div>
+
+            <form method="post" data-edit hidden action="#" data-demo-action="app:/SecurityGuards/SavePersonal">
+                <input type="hidden" name="SecurityGuardId" value="1" />
+                
+<div class="guard-fields">
+    <div>
+        <label for="FullName" class="form-label">שם ושם משפחה <span class="text-danger">*</span></label>
+        <input type="text" id="FullName" name="FullName" value="&#x5D0;&#x5DC;&#x5D9; &#x5DE;&#x5D6;&#x5E8;&#x5D7;&#x5D9;"
+               class="form-control" maxlength="150" required autocomplete="off" />
+    </div>
+    <div>
+        <label for="Role" class="form-label">תפקיד <span class="text-danger">*</span></label>
+        <select id="Role" name="Role" class="form-select" required>
+            <option value="">בחירה</option>
+                <option value="Controller">&#x5D1;&#x5E7;&#x5E8;</option>
+                <option value="GateManager" selected="selected">&#x5DE;&#x5E0;&#x5D4;&#x5DC; &#x5E9;&#x5E2;&#x5E8;&#x5D9;&#x5DD;</option>
+        </select>
+    </div>
+    <div>
+        <label for="IdNumber" class="form-label">ת.ז.</label>
+        <input type="text" id="IdNumber" name="IdNumber"
+               class="form-control tabular" inputmode="numeric" pattern="\d{1,9}" maxlength="9"
+               title="עד 9 ספרות" autocomplete="off" placeholder="&#x200E;*****0011" />
+            <div class="form-text">שמורה &#x200E;*****0011. להחלפה - הקלידו מספר מלא; ריק משאיר את השמורה.</div>
+            <label class="form-check-label small">
+                <input type="checkbox" class="form-check-input" name="RemoveIdNumber" value="true" />
+                הסרת תעודת הזהות
+            </label>
+    </div>
+    <div>
+        <label for="StartDate" class="form-label">תחילת עבודה</label>
+        <input type="date" id="StartDate" name="StartDate" value="2023-06-28"
+               class="form-control" max="2026-10-28" />
+        <div class="form-text">הוותק מחושב מהתאריך הזה.</div>
+    </div>
+    <div>
+        <label for="CertifiedDate" class="form-label">הוסמך בתאריך</label>
+        <input type="date" id="CertifiedDate" name="CertifiedDate" value="2023-07-28"
+               class="form-control" max="2026-10-28" />
+    </div>
+</div>
+
+                <div class="guard-pane__actions">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="bi bi-check-lg"></i>
+                        שמירה
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm" data-edit-cancel>ביטול</button>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+        </section>
+
+            <section class="tab-pane guard-pane "
+                     id="pane-Terminal" role="tabpanel">
+                <div class="guard-pane__head">
+                    <h4>&#x5D4;&#x5DB;&#x5E8;&#x5D5;&#x5EA; &#x5E2;&#x5DE;&#x5D3;&#x5D5;&#x5EA; &#x5DC;&#x5E4;&#x5D9; &#x5D4;&#x5E0;&#x5D7;&#x5D9;&#x5D5;&#x5EA; &#x5DE;&#x5E1;&#x5D5;&#x5E3; &#x5D7;&#x5D3;&#x5E9;&#x5D5;&#x5EA; 2026</h4>
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-edit-open>
+                        <i class="bi bi-pencil"></i>
+                        עריכה
+                    </button>
+                </div>
+
+                <div data-view>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle guard-table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>עמדה / נושא</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5DE;&#x5E1;&#x5D5;&#x5E3;</td>
+                                            <td class="text-center tabular">
+22/07/2023                                            </td>
+                                            <td class="text-center tabular">
+                                                    <span class="guard-x" title="לא בוצע"><i class="bi bi-x-lg"></i><span class="visually-hidden">לא בוצע</span></span>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4;</td>
+                                            <td class="text-center tabular">
+14/07/2023                                            </td>
+                                            <td class="text-center tabular">
+                                                    <span class="guard-x" title="לא בוצע"><i class="bi bi-x-lg"></i><span class="visually-hidden">לא בוצע</span></span>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4;</td>
+                                            <td class="text-center tabular">
+19/08/2023                                            </td>
+                                            <td class="text-center tabular">
+27/04/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8;</td>
+                                            <td class="text-center tabular">
+14/08/2023                                            </td>
+                                            <td class="text-center tabular">
+31/07/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD;</td>
+                                            <td class="text-center tabular">
+13/07/2023                                            </td>
+                                            <td class="text-center tabular">
+10/05/2026                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <form method="post" data-edit hidden action="#" data-demo-action="app:/SecurityGuards/SavePage">
+                    <input type="hidden" name="SecurityGuardId" value="1" />
+                    <input type="hidden" name="PageKey" value="Terminal" />
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle guard-table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>עמדה / נושא</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5DE;&#x5E1;&#x5D5;&#x5E3;
+                                            <input type="hidden" name="Rows[0].RowKey" value="TerminalController" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[0].TrainingDate"
+                                                       value="2023-07-22"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5DE;&#x5E1;&#x5D5;&#x5E3; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[0].RefreshDate"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5DE;&#x5E1;&#x5D5;&#x5E3; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4;
+                                            <input type="hidden" name="Rows[1].RowKey" value="EntryGate" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[1].TrainingDate"
+                                                       value="2023-07-14"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[1].RefreshDate"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4;
+                                            <input type="hidden" name="Rows[2].RowKey" value="ExitGate" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[2].TrainingDate"
+                                                       value="2023-08-19"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[2].RefreshDate"
+                                                       value="2026-04-27"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8;
+                                            <input type="hidden" name="Rows[3].RowKey" value="Dispatch" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[3].TrainingDate"
+                                                       value="2023-08-14"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[3].RefreshDate"
+                                                       value="2026-07-31"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD;
+                                            <input type="hidden" name="Rows[4].RowKey" value="EmployeeEntrance" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[4].TrainingDate"
+                                                       value="2023-07-13"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[4].RefreshDate"
+                                                       value="2026-05-10"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-muted small">שדה שנשאר ריק יוצג כ-X (לא בוצע). תאריך חדש מחליף את הקודם.</p>
+                    <div class="guard-pane__actions">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="bi bi-check-lg"></i>
+                            שמירה
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-edit-cancel>ביטול</button>
+                    </div>
+                <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+            </section>
+            <section class="tab-pane guard-pane "
+                     id="pane-Security" role="tabpanel">
+                <div class="guard-pane__head">
+                    <h4>&#x5D4;&#x5DB;&#x5E8;&#x5D5;&#x5EA; &#x5E2;&#x5DE;&#x5D3;&#x5D5;&#x5EA; &#x5DC;&#x5E4;&#x5D9; &#x5D4;&#x5E0;&#x5D7;&#x5D9;&#x5D5;&#x5EA; &#x5D1;&#x5D9;&#x5D8;&#x5D7;&#x5D5;&#x5DF; &#x5D7;&#x5D3;&#x5E9;&#x5D5;&#x5EA; 2026</h4>
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-edit-open>
+                        <i class="bi bi-pencil"></i>
+                        עריכה
+                    </button>
+                </div>
+
+                <div data-view>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle guard-table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>עמדה / נושא</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5DE;&#x5E1;&#x5D5;&#x5E3;</td>
+                                            <td class="text-center tabular">
+22/07/2023                                            </td>
+                                            <td class="text-center tabular">
+20/09/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4;</td>
+                                            <td class="text-center tabular">
+14/07/2023                                            </td>
+                                            <td class="text-center tabular">
+28/09/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4;</td>
+                                            <td class="text-center tabular">
+19/08/2023                                            </td>
+                                            <td class="text-center tabular">
+10/09/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8;</td>
+                                            <td class="text-center tabular">
+14/08/2023                                            </td>
+                                            <td class="text-center tabular">
+                                                    <span class="guard-x" title="לא בוצע"><i class="bi bi-x-lg"></i><span class="visually-hidden">לא בוצע</span></span>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD;</td>
+                                            <td class="text-center tabular">
+13/07/2023                                            </td>
+                                            <td class="text-center tabular">
+                                                    <span class="guard-x" title="לא בוצע"><i class="bi bi-x-lg"></i><span class="visually-hidden">לא בוצע</span></span>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5E9;&#x5E2;&#x5EA; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; &#x5D5;&#x5DE;&#x5E6;&#x5D1;&#x5D9; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD;</td>
+                                            <td class="text-center tabular">
+06/07/2023                                            </td>
+                                            <td class="text-center tabular">
+30/07/2026                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <form method="post" data-edit hidden action="#" data-demo-action="app:/SecurityGuards/SavePage">
+                    <input type="hidden" name="SecurityGuardId" value="1" />
+                    <input type="hidden" name="PageKey" value="Security" />
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle guard-table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>עמדה / נושא</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5DE;&#x5E1;&#x5D5;&#x5E3;
+                                            <input type="hidden" name="Rows[0].RowKey" value="TerminalController" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[0].TrainingDate"
+                                                       value="2023-07-22"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5DE;&#x5E1;&#x5D5;&#x5E3; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[0].RefreshDate"
+                                                       value="2026-09-20"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5DE;&#x5E1;&#x5D5;&#x5E3; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4;
+                                            <input type="hidden" name="Rows[1].RowKey" value="EntryGate" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[1].TrainingDate"
+                                                       value="2023-07-14"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[1].RefreshDate"
+                                                       value="2026-09-28"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4;
+                                            <input type="hidden" name="Rows[2].RowKey" value="ExitGate" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[2].TrainingDate"
+                                                       value="2023-08-19"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[2].RefreshDate"
+                                                       value="2026-09-10"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8;
+                                            <input type="hidden" name="Rows[3].RowKey" value="Dispatch" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[3].TrainingDate"
+                                                       value="2023-08-14"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[3].RefreshDate"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD;
+                                            <input type="hidden" name="Rows[4].RowKey" value="EmployeeEntrance" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[4].TrainingDate"
+                                                       value="2023-07-13"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[4].RefreshDate"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5E9;&#x5E2;&#x5EA; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; &#x5D5;&#x5DE;&#x5E6;&#x5D1;&#x5D9; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD;
+                                            <input type="hidden" name="Rows[5].RowKey" value="Emergency" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[5].TrainingDate"
+                                                       value="2023-07-06"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E9;&#x5E2;&#x5EA; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; &#x5D5;&#x5DE;&#x5E6;&#x5D1;&#x5D9; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[5].RefreshDate"
+                                                       value="2026-07-30"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E9;&#x5E2;&#x5EA; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; &#x5D5;&#x5DE;&#x5E6;&#x5D1;&#x5D9; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-muted small">שדה שנשאר ריק יוצג כ-X (לא בוצע). תאריך חדש מחליף את הקודם.</p>
+                    <div class="guard-pane__actions">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="bi bi-check-lg"></i>
+                            שמירה
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-edit-cancel>ביטול</button>
+                    </div>
+                <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+            </section>
+            <section class="tab-pane guard-pane "
+                     id="pane-Drills" role="tabpanel">
+                <div class="guard-pane__head">
+                    <h4>&#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;&#x5D9;&#x5DD;, &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D5;&#x5EA; &#x5D5;&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5D5;&#x5EA;</h4>
+                    <button type="button" class="btn btn-outline-primary btn-sm" data-edit-open>
+                        <i class="bi bi-pencil"></i>
+                        עריכה
+                    </button>
+                </div>
+
+                <div data-view>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle guard-table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>עמדה / נושא</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D8;&#x5D0;&#x5D1;&#x5DC;&#x5D8; &#x5DE;&#x5E1;&#x5D5;&#x5E3;</td>
+                                            <td class="text-center tabular">
+23/07/2023                                            </td>
+                                            <td class="text-center tabular">
+27/10/2026                                            </td>
+                                            <td class="text-center tabular">
+17/10/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA;</td>
+                                            <td class="text-center tabular">
+16/08/2023                                            </td>
+                                            <td class="text-center tabular">
+16/10/2026                                            </td>
+                                            <td class="text-center tabular">
+03/06/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4;</td>
+                                            <td class="text-center tabular">
+14/07/2023                                            </td>
+                                            <td class="text-center tabular">
+08/07/2026                                            </td>
+                                            <td class="text-center tabular">
+                                                    <span class="guard-x" title="לא בוצע"><i class="bi bi-x-lg"></i><span class="visually-hidden">לא בוצע</span></span>
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4;</td>
+                                            <td class="text-center tabular">
+19/08/2023                                            </td>
+                                            <td class="text-center tabular">
+14/08/2026                                            </td>
+                                            <td class="text-center tabular">
+25/04/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8;</td>
+                                            <td class="text-center tabular">
+14/08/2023                                            </td>
+                                            <td class="text-center tabular">
+06/08/2026                                            </td>
+                                            <td class="text-center tabular">
+01/06/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD;</td>
+                                            <td class="text-center tabular">
+13/07/2023                                            </td>
+                                            <td class="text-center tabular">
+06/08/2026                                            </td>
+                                            <td class="text-center tabular">
+23/06/2026                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">&#x5E9;&#x5E2;&#x5EA; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; &#x5D5;&#x5DE;&#x5E6;&#x5D1;&#x5D9; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD;</td>
+                                            <td class="text-center tabular">
+06/07/2023                                            </td>
+                                            <td class="text-center tabular">
+28/09/2026                                            </td>
+                                            <td class="text-center tabular">
+                                                    <span class="guard-x" title="לא בוצע"><i class="bi bi-x-lg"></i><span class="visually-hidden">לא בוצע</span></span>
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <form method="post" data-edit hidden action="#" data-demo-action="app:/SecurityGuards/SavePage">
+                    <input type="hidden" name="SecurityGuardId" value="1" />
+                    <input type="hidden" name="PageKey" value="Drills" />
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle guard-table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>עמדה / נושא</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;</th>
+                                        <th class="text-center">&#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D8;&#x5D0;&#x5D1;&#x5DC;&#x5D8; &#x5DE;&#x5E1;&#x5D5;&#x5E3;
+                                            <input type="hidden" name="Rows[0].RowKey" value="TabletCourse" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[0].TrainingDate"
+                                                       value="2023-07-23"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D8;&#x5D0;&#x5D1;&#x5DC;&#x5D8; &#x5DE;&#x5E1;&#x5D5;&#x5E3; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[0].DrillDate"
+                                                       value="2026-10-27"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D8;&#x5D0;&#x5D1;&#x5DC;&#x5D8; &#x5DE;&#x5E1;&#x5D5;&#x5E3; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[0].RefreshDate"
+                                                       value="2026-10-17"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D8;&#x5D0;&#x5D1;&#x5DC;&#x5D8; &#x5DE;&#x5E1;&#x5D5;&#x5E3; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA;
+                                            <input type="hidden" name="Rows[1].RowKey" value="SafetyCourse" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[1].TrainingDate"
+                                                       value="2023-08-16"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[1].DrillDate"
+                                                       value="2026-10-16"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[1].RefreshDate"
+                                                       value="2026-06-03"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5DC;&#x5D5;&#x5DE;&#x5D3;&#x5EA; &#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4;
+                                            <input type="hidden" name="Rows[2].RowKey" value="EntryGate" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[2].TrainingDate"
+                                                       value="2023-07-14"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[2].DrillDate"
+                                                       value="2026-07-08"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[2].RefreshDate"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4;
+                                            <input type="hidden" name="Rows[3].RowKey" value="ExitGate" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[3].TrainingDate"
+                                                       value="2023-08-19"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[3].DrillDate"
+                                                       value="2026-08-14"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[3].RefreshDate"
+                                                       value="2026-04-25"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8;
+                                            <input type="hidden" name="Rows[4].RowKey" value="Dispatch" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[4].TrainingDate"
+                                                       value="2023-08-14"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[4].DrillDate"
+                                                       value="2026-08-06"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[4].RefreshDate"
+                                                       value="2026-06-01"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5D1;&#x5E7;&#x5E8; &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD;
+                                            <input type="hidden" name="Rows[5].RowKey" value="EmployeeEntrance" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[5].TrainingDate"
+                                                       value="2023-07-13"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[5].DrillDate"
+                                                       value="2026-08-06"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[5].RefreshDate"
+                                                       value="2026-06-23"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E2;&#x5DE;&#x5D3;&#x5EA; &#x5DB;&#x5E0;&#x5D9;&#x5E1;&#x5EA; &#x5E2;&#x5D5;&#x5D1;&#x5D3;&#x5D9;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-semibold">
+                                            &#x5E9;&#x5E2;&#x5EA; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; &#x5D5;&#x5DE;&#x5E6;&#x5D1;&#x5D9; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD;
+                                            <input type="hidden" name="Rows[6].RowKey" value="Emergency" />
+                                        </td>
+                                            <td>
+                                                <input type="date" name="Rows[6].TrainingDate"
+                                                       value="2023-07-06"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E9;&#x5E2;&#x5EA; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; &#x5D5;&#x5DE;&#x5E6;&#x5D1;&#x5D9; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5D4;&#x5D3;&#x5E8;&#x5DB;&#x5D4;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[6].DrillDate"
+                                                       value="2026-09-28"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E9;&#x5E2;&#x5EA; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; &#x5D5;&#x5DE;&#x5E6;&#x5D1;&#x5D9; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5EA;&#x5E8;&#x5D2;&#x5D9;&#x5DC;" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name="Rows[6].RefreshDate"
+                                                       max="2026-10-28" class="form-control form-control-sm"
+                                                       aria-label="&#x5E9;&#x5E2;&#x5EA; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; &#x5D5;&#x5DE;&#x5E6;&#x5D1;&#x5D9; &#x5D7;&#x5D9;&#x5E8;&#x5D5;&#x5DD; - &#x5EA;&#x5D0;&#x5E8;&#x5D9;&#x5DA; &#x5E8;&#x5D9;&#x5E2;&#x5E0;&#x5D5;&#x5DF; &#x5E0;&#x5D4;&#x5DC;&#x5D9;&#x5DD;" />
+                                            </td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-muted small">שדה שנשאר ריק יוצג כ-X (לא בוצע). תאריך חדש מחליף את הקודם.</p>
+                    <div class="guard-pane__actions">
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            <i class="bi bi-check-lg"></i>
+                            שמירה
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-edit-cancel>ביטול</button>
+                    </div>
+                <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+            </section>
+    </div>
+</div>
+
+
+        </main>
+    </div>
+
+    <footer b-9ud7xt2yc2 class="site-footer text-center py-3">
+        מחלקת ביטחון
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        (function () {
+            // הלשונית הפתוחה נכתבת לכתובת, כדי שרענון העמוד לא יחזיר לעמוד הראשון
+            document.querySelectorAll('.guard-tabs [data-bs-toggle="tab"]').forEach(function (tab) {
+                tab.addEventListener('shown.bs.tab', function () {
+                    var url = new URL(window.location.href);
+                    url.searchParams.set('tab', tab.dataset.tab);
+                    window.history.replaceState(null, '', url);
+                });
+            });
+
+            document.querySelectorAll('form[data-confirm]').forEach(function (form) {
+                form.addEventListener('submit', function (e) {
+                    if (!window.confirm(form.dataset.confirm)) e.preventDefault();
+                });
+            });
+
+            function setEditing(pane, editing) {
+                pane.querySelector('[data-view]').hidden = editing;
+                pane.querySelector('[data-edit]').hidden = !editing;
+                pane.querySelector('[data-edit-open]').hidden = editing;
+            }
+
+            document.querySelectorAll('.guard-pane').forEach(function (pane) {
+                pane.querySelector('[data-edit-open]').addEventListener('click', function () {
+                    setEditing(pane, true);
+                    var first = pane.querySelector('[data-edit] input:not([type=hidden])');
+                    if (first) first.focus();
+                });
+                pane.querySelector('[data-edit-cancel]').addEventListener('click', function () {
+                    // reset מחזיר את הערכים ששמורים, כך שביטול באמת מבטל
+                    pane.querySelector('[data-edit]').reset();
+                    setEditing(pane, false);
+                });
+            });
+
+        })();
+    </script>
+
+    <script src="demo/sphere.js"></script>
+    <script src="demo/data.js"></script>
+    <script src="demo/demo.js"></script>
+</body>
+</html>

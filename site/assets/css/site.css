@@ -1,0 +1,2004 @@
+/*
+    Design system - security portal (demo build)
+    ---------------------------------------------------------------
+    Colors come from the puzzle-sphere mark:
+      - The deep purple is the text accent and the one action color.
+      - The four sphere purples appear only as the brand band in the header.
+      - Event categories in charts get their own three distinct hues (--cat-*), so they stay
+        tellable apart - including for color-blind users.
+
+    Motion: press feedback and hover transitions only. No page-entry animations -
+    this is a work tool opened dozens of times a day, and any delay feels slow.
+*/
+
+:root {
+  --brand: #5a2fc9;
+  --brand-dark: #46219f;
+  --brand-deep: #34167a;
+  --brand-light: #f1ecff;
+  --brand-border: #ddd2fb;
+
+  /* The sphere purples: the brand band only */
+  --stripe-1: #4b22b8;
+  --stripe-2: #7140ea;
+  --stripe-3: #a07cff;
+  --stripe-4: #d4c4ff;
+
+  /* Event categories in charts and KPI cards */
+  --cat-safety: #6a3fe0;
+  --cat-exceptional: #dd7a2a;
+  --cat-hazmat: #2c9f78;
+
+  /* Status colors: functional green / amber / red */
+  --ok: #5e7a18;
+  --ok-bg: #f1f5e4;
+  --pending: #b4571f;
+  --pending-bg: #fbeee6;
+  --danger: #8f1b1d;
+  --danger-bg: #fbeaea;
+
+  --ink: #1e2029;
+  --ink-soft: #565075;
+  --muted: #7e7894;
+
+  --surface: #ffffff;
+  --page-bg: #f6f4fb;
+  --border: #e6e2f0;
+
+  --radius: 10px;
+  --radius-sm: 8px;
+
+  --shadow-sm: 0 1px 2px rgba(30, 32, 41, 0.05);
+  --shadow-md: 0 8px 24px rgba(30, 32, 41, 0.09);
+
+  /* עקומות תנועה חזקות - ברירות המחדל של CSS חלשות מדי */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --fast: 140ms;
+  --base: 180ms;
+
+  --text-sm: 0.875rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.5rem;
+}
+
+html {
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Heebo", "Segoe UI", Tahoma, Arial, sans-serif;
+  color: var(--ink);
+  background-color: var(--page-bg);
+  margin-bottom: 60px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+}
+
+a {
+  color: var(--brand);
+}
+
+a:hover {
+  color: var(--brand-dark);
+}
+
+/* ספרות בעמודה אחת - תאריכים, שעות ומספרים לא "רוקדים" */
+time,
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------- Navbar ---------------- */
+
+.site-navbar {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 1.05rem;
+  letter-spacing: -0.015em;
+}
+
+.site-navbar .navbar-brand img {
+  height: 34px;
+  width: auto;
+}
+
+.site-navbar .user-chip {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  background-color: var(--brand-light);
+  border: 1px solid var(--brand-border);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+}
+
+/* ---------------- Today band (dashboard header) ---------------- */
+
+.today-band {
+  position: relative;
+  background-color: var(--brand-deep);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1.75rem 1.75rem 1.9rem;
+  margin-bottom: 2.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  text-align: center;
+}
+
+/* ציטוט ישיר של פסי הלוגו - מופיע פעם אחת בעמוד */
+.today-band::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(
+    to left,
+    var(--stripe-1) 0 25%,
+    var(--stripe-2) 25% 50%,
+    var(--stripe-3) 50% 75%,
+    var(--stripe-4) 75% 100%
+  );
+}
+
+.today-band__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.today-band__day {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.today-band__full {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.66);
+  font-variant-numeric: tabular-nums;
+}
+
+.today-band__duty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  min-width: 220px;
+}
+
+.today-band__duty-label {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.today-band__duty-name {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.today-band__duty-empty {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.today-band__duty-phone {
+  color: rgba(255, 255, 255, 0.8);
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.today-band__duty-phone:hover {
+  color: #fff;
+}
+
+/* ---------------- Tiles (dashboard) ---------------- */
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* שלושה אריחים: האחרון נפרס על שתי העמודות וממורכז ברוחב של עמודה אחת,
+   כדי שלא ייצמד לצד. הרוחב נגזר מה-gap של הגריד. */
+.tile-grid--center-last .tile:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 0.5rem);
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  text-align: center;
+  min-height: 150px;
+  padding: 1.5rem 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--base) var(--ease-out),
+              box-shadow var(--base) var(--ease-out),
+              border-color var(--base) var(--ease-out);
+}
+
+.tile__icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--brand);
+  margin-bottom: 0.15rem;
+}
+
+.tile__title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.tile__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--text-sm);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.tile__meta.is-done {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.tile__meta.is-done .status-dot {
+  background-color: var(--ok);
+}
+
+.tile__meta.is-pending {
+  color: var(--pending);
+  font-weight: 600;
+}
+
+.tile__meta.is-pending .status-dot {
+  background-color: var(--pending);
+}
+
+/* מודולים שטרם נבנו - נראים כחלק מאותה רשת, אך לא לחיצים */
+.tile.is-soon {
+  background-color: transparent;
+  border-style: dashed;
+  cursor: not-allowed;
+}
+
+.tile.is-soon .tile__icon,
+.tile.is-soon .tile__title {
+  color: var(--muted);
+}
+
+/* hover רק במכשירים עם עכבר - במגע זה גורם ל"תקיעת" מצב hover */
+@media (hover: hover) and (pointer: fine) {
+  a.tile:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--brand-border);
+  }
+}
+
+a.tile:active {
+  transform: scale(0.98);
+}
+
+a.tile:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* ---------------- Buttons ---------------- */
+
+.btn {
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: transform var(--fast) var(--ease-out),
+              background-color var(--fast) var(--ease-out),
+              border-color var(--fast) var(--ease-out),
+              color var(--fast) var(--ease-out);
+}
+
+/* משוב לחיצה - הממשק "מרגיש" שהוא שמע את המשתמש */
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--brand-dark);
+  border-color: var(--brand-dark);
+  color: #ffffff;
+}
+
+.btn-outline-primary {
+  color: var(--brand);
+  border-color: var(--brand-border);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: #ffffff;
+}
+
+.btn-outline-secondary {
+  color: var(--ink-soft);
+  border-color: var(--border);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--ink-soft);
+  border-color: var(--ink-soft);
+  color: #ffffff;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.2rem var(--brand-light), 0 0 0 0.3rem var(--brand-border);
+}
+
+/* ---------------- Cards / panels ---------------- */
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------------- Tables ---------------- */
+
+.table {
+  --bs-table-bg: var(--surface);
+  border-color: var(--border);
+}
+
+.table thead th {
+  background-color: var(--brand-light);
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  letter-spacing: 0.01em;
+  border-bottom-width: 1px;
+  border-color: var(--brand-border);
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+  border-color: var(--border);
+}
+
+/* ---------------- Forms ---------------- */
+
+.form-control,
+.form-select {
+  border-radius: var(--radius-sm);
+  border-color: var(--border);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+/* רוב תיבות הסימון/רדיו הן <input> פשוטים ללא class של Bootstrap;
+   accent-color צובעת בקרות טבעיות בלי לשנות markup. */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--brand);
+}
+
+/* ---------------- Alerts ---------------- */
+
+.alert-info {
+  background-color: var(--brand-light);
+  border-color: var(--brand-border);
+  color: var(--ink);
+}
+
+.alert-danger {
+  background-color: var(--danger-bg);
+  border-color: #edc9c9;
+  color: var(--danger);
+}
+
+/* ---------------- Report page header ---------------- */
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.page-head h2 {
+  font-size: var(--text-2xl);
+  margin: 0;
+}
+
+.page-head__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.submitted-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ok);
+  background-color: var(--ok-bg);
+  border: 1px solid #dce6c2;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------- Duty manager ---------------- */
+
+.duty-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.duty-card::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 3px;
+  background-color: var(--brand);
+}
+
+.duty-card__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 3rem;
+}
+
+.duty-card__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.duty-card__label {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.duty-card__value {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.duty-card__phone {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.duty-card__phone:hover {
+  text-decoration: underline;
+}
+
+.duty-card__empty {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+/* כותרת "פרטי מנהל תורן" מימין, כפתור הדו"ח בקצה השמאלי */
+.duty-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------------- Events module ---------------- */
+
+.involved-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.involved-add {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+/* גורם מעורב הוא כבר לא שורה אלא בלוק: סוג הגורם קובע איזה חלק ממנו נפתח,
+   ולכן כל גורם מוקף ומסומן במספר - אחרת אי אפשר לדעת איפה נגמר אחד ומתחיל הבא. */
+.involved-row {
+  padding: 0.9rem 1rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--page-bg);
+}
+
+.involved-row + .involved-row {
+  margin-top: 0.85rem;
+}
+
+.involved-row__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.involved-row__title {
+  font-weight: 600;
+  color: var(--brand);
+}
+
+#involvedRows.is-single .involved-remove {
+  visibility: hidden;
+}
+
+/* סוג המעורבות - בחירה מרובה. הסימונים בשורה אחת כל עוד יש מקום. */
+.role-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+}
+
+.role-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.role-check .form-check-input {
+  margin: 0;
+  float: none;
+}
+
+/* טבלת הערכת החומרה - חמש שורות על ארבע דרגות, כמו בטופס הנייר.
+   כל התא לחיץ ולא רק העיגול: התאים צפופים, ופספוס של עיגול קטן
+   היה מסמן את השורה הלא נכונה. */
+.severity-table th,
+.severity-table td {
+  padding: 0.5rem 0.6rem;
+  font-size: var(--text-sm);
+  vertical-align: top;
+}
+
+.severity-table thead th,
+.severity-table tbody th {
+  font-weight: 600;
+}
+
+.severity-table tbody th {
+  white-space: nowrap;
+  color: var(--brand);
+}
+
+.severity-cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.severity-cell .form-check-input {
+  margin: 0.15rem 0 0;
+  float: none;
+  flex: 0 0 auto;
+}
+
+.severity-table td.is-selected {
+  background: var(--brand-light);
+  box-shadow: inset 0 0 0 2px var(--brand);
+}
+
+/* בתצוגת הפרטים אין מה ללחוץ, והתאים שלא נבחרו הם רק הקשר */
+.severity-table--read td {
+  color: var(--muted);
+}
+
+.severity-table--read td.is-selected {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.severity-table--read tr.is-empty th {
+  color: var(--muted);
+}
+
+/* ההחלטה על החומרה יושבת מתחת לטבלה ומופרדת ממנה בקו: היא לא עוד
+   שורה בטבלה אלא המסקנה ממנה. */
+.severity-decision {
+  padding-top: 0.9rem;
+  margin-top: 0.4rem;
+  border-top: 1px solid var(--border);
+}
+
+.severity-decision__note {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* טבלת החומרה של גורם לאירוע יושבת בתוך הבלוק שלו, על רקע לבן כדי
+   שתיקרא כטופס ולא כעוד שכבה של אותו אפור */
+.party-severity {
+  padding: 0.85rem 0.9rem 0.9rem;
+  border: 1px solid var(--brand-border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.party-severity__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 0.2rem;
+}
+
+/* הסבר לשינוי חומרה: נראה כשדה טקסט אחד, אבל הפתיח הוא טקסט רגיל
+   שאינו חלק מהשדה - ולכן אי אפשר למחוק או לשנות אותו */
+.severity-change__box {
+  border: 1px solid var(--pending);
+  border-radius: 0.375rem;
+  background: var(--surface);
+  padding: 0.45rem 0.75rem 0.2rem;
+}
+
+.severity-change__box:focus-within {
+  box-shadow: 0 0 0 0.2rem rgba(180, 87, 31, 0.18);
+}
+
+.severity-change__prefix {
+  display: block;
+  font-weight: 700;
+  color: var(--pending);
+  user-select: none;
+}
+
+.severity-change__text {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  resize: vertical;
+  padding: 0.15rem 0 0.25rem;
+  background: transparent;
+  color: var(--ink);
+}
+
+/* קבצים שכבר צורפו לטיוטה, מעל שדה הבחירה של קבצים נוספים */
+.draft-files {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.draft-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--page-bg);
+  font-size: var(--text-sm);
+}
+
+.draft-file a {
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.draft-file__remove {
+  flex: none;
+  white-space: nowrap;
+}
+
+.draft-file--removed a {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+/* רשימת התפוצה: שורה שסומנה למחיקה (נמחקת בשמירה) */
+.recipient-row.is-removed td {
+  background: var(--page-bg);
+}
+
+.recipient-row.is-removed input[type=text],
+.recipient-row.is-removed input[type=email] {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.recipient-row.is-removed input[type=checkbox] {
+  opacity: 0.4;
+}
+
+.recipients-table input[type=text] {
+  min-width: 9rem;
+}
+
+.recipients-table input[type=email] {
+  min-width: 13rem;
+}
+
+.draft-file--removed a::after {
+  content: " - יוסר בשמירה";
+  display: inline-block;
+  margin-inline-start: 0.25rem;
+  color: var(--danger);
+}
+
+.severity-change-read {
+  white-space: pre-wrap;
+  font-weight: 400;
+}
+
+.draft-badge {
+  display: inline-block;
+  margin-inline-start: 0.5rem;
+  padding: 0.1rem 0.65rem;
+  border-radius: 999px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  vertical-align: middle;
+  color: var(--pending);
+  background: var(--pending-bg);
+}
+
+.event-save-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* היסטוריית המעורבות של גורם מעורב - הקשר לשיקול הדעת, ולכן שקטה
+   מהשדות שמעליה ולא תחרות מולם */
+.party-history {
+  padding: 0.6rem 0.75rem;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-size: var(--text-sm);
+}
+
+.party-history__head {
+  font-weight: 600;
+  color: var(--brand);
+  margin-bottom: 0.35rem;
+}
+
+.party-history__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.party-history__list li + li {
+  margin-top: 0.2rem;
+}
+
+.party-history__empty,
+.party-history__more {
+  color: var(--muted);
+}
+
+.party-history__more {
+  margin-top: 0.35rem;
+}
+
+/* בחירת עובד: תיבת חיפוש עם רשימת הצעות מתחתיה. הרשימה צפה מעל
+   השדות הבאים, כדי שלא תזיז את הטופס בכל הקלדה. */
+.emp-picker {
+  position: relative;
+}
+
+.emp-picker__menu {
+  position: absolute;
+  z-index: 20;
+  inset-inline: 0.75rem;
+  max-height: 16rem;
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.emp-picker__item {
+  display: block;
+  width: 100%;
+  padding: 0.45rem 0.7rem;
+  border: 0;
+  background: none;
+  text-align: inherit;
+  font-size: 0.92rem;
+}
+
+.emp-picker__item:hover,
+.emp-picker__item:focus,
+.emp-picker__item.is-active {
+  background: var(--brand-light);
+}
+
+.emp-picker__status.is-error {
+  color: var(--danger);
+}
+
+.emp-field:disabled {
+  background: var(--brand-light);
+}
+
+/* אנשי קשר - מנהלים: הרשימה סטטית עד שנלחץ "ערוך", ואז מתחלפת בשדות עריכה */
+.contacts-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.contacts-section .contacts-edit-only {
+  display: none;
+}
+
+.contacts-section.is-editing .contacts-view-only {
+  display: none;
+}
+
+.contacts-section.is-editing .form-text.contacts-edit-only {
+  display: block;
+}
+
+/* בעריכה הטבלה מחליפה את כרטיסי המנהלים */
+.contacts-section.is-editing .contacts-table {
+  display: block;
+}
+
+.contacts-section.is-editing .contacts-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* דו"ח ממונה בטיחות: אזור גרירה/בחירה של קובץ ה-PDF */
+.so-report {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.so-drop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.25rem;
+  border: 2px dashed var(--border);
+  border-radius: 0.5rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.so-drop:hover,
+.so-drop.is-over {
+  border-color: var(--brand);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* סרטונים מצורפים לאירוע */
+.event-video + .event-video {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border);
+}
+
+.event-video__player {
+  width: 100%;
+  max-height: 26rem;
+  border-radius: 0.5rem;
+  background-color: #000;
+}
+
+.event-video__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* תצוגה מקדימה של דו"ח ה-Word, מומר ל-HTML בצד הלקוח */
+.doc-preview {
+  max-height: 30rem;
+  overflow-y: auto;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background-color: var(--surface);
+  line-height: 1.7;
+}
+
+.doc-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+}
+
+.doc-preview td,
+.doc-preview th {
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.6rem;
+}
+
+.doc-preview img {
+  max-width: 100%;
+  height: auto;
+}
+
+.doc-preview > :last-child {
+  margin-bottom: 0;
+}
+
+.sort-link {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sort-link:hover {
+  color: var(--brand);
+}
+
+.event-row {
+  cursor: pointer;
+}
+
+.detail-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem 2rem;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .detail-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.detail-list dt {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+
+.detail-list dd {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.detail-text {
+  white-space: pre-wrap;
+  margin: 0;
+}
+
+.attachment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.attachment {
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: var(--page-bg);
+}
+
+.attachment img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------------- Events analysis (ניתוח אירועים) ----------------
+   הגרפים כאן הם CSS בלבד, בלי ספריית תרשימים: שני סוגי אירוע וכמה קטגוריות
+   לא מצדיקים תלות נוספת, והעמוד נטען גם כשאין גישה ל-CDN. */
+
+.range-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.range-preset {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background-color: var(--surface);
+  transition: color var(--fast) var(--ease-out), border-color var(--fast) var(--ease-out);
+}
+
+.range-preset:hover {
+  color: var(--brand);
+  border-color: var(--brand-border);
+}
+
+.range-preset.is-active {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+/* ---------------- KPI ---------------- */
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--brand);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 0.85rem 1rem;
+}
+
+.kpi--safety {
+  border-top-color: var(--cat-safety);
+}
+
+.kpi--exceptional {
+  border-top-color: var(--cat-exceptional);
+}
+
+.kpi--hazmat {
+  border-top-color: var(--cat-hazmat);
+}
+
+.kpi__value {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.kpi__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* min-height: השורה נשארת גם כשאין ערך, כדי שהאריחים יישארו באותו גובה */
+.kpi__hint {
+  font-size: 0.78rem;
+  color: var(--muted);
+  min-height: 1.1em;
+}
+
+/* ---------------- Panels ---------------- */
+
+.analysis-panel {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.analysis-panel__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.analysis-panel__title {
+  font-size: 1rem;
+  margin: 0 0 0.9rem;
+}
+
+.analysis-panel__note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0.7rem 0 0;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .analysis-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.analysis-grid .analysis-panel {
+  margin-bottom: 0;
+}
+
+.legend {
+  display: flex;
+  gap: 0.9rem;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+}
+
+.legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.legend__swatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 2px;
+}
+
+.legend__swatch--safety {
+  background-color: var(--cat-safety);
+}
+
+.legend__swatch--exceptional {
+  background-color: var(--cat-exceptional);
+}
+
+.legend__swatch--hazmat {
+  background-color: var(--cat-hazmat);
+}
+
+/* ---------------- Trend columns ---------------- */
+
+.trend {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.35rem;
+  overflow-x: auto;
+}
+
+.trend__col {
+  flex: 1 1 0;
+  min-width: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.trend__total {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  min-height: 1.1em;
+}
+
+.trend__bar {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--border);
+}
+
+.trend__stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+}
+
+/* flex-basis 0: היחס בין המקטעים נקבע כולו ע"י flex-grow שנכתב בתצוגה */
+.trend__seg {
+  flex-basis: 0;
+  min-height: 0;
+}
+
+.trend__seg--safety {
+  background-color: var(--cat-safety);
+}
+
+.trend__seg--exceptional {
+  background-color: var(--cat-exceptional);
+}
+
+.trend__seg--hazmat {
+  background-color: var(--cat-hazmat);
+}
+
+.trend__label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ---------------- Horizontal bars ---------------- */
+
+.bar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+/* עמודת הערכים ברוחב קבוע: כך כל הפסים נגמרים באותו קו, והאחוזים
+   מיושרים זה מתחת לזה במקום לרקוד לפי מספר הספרות שלפניהם */
+.bar-row {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr 5rem;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+@media (max-width: 480px) {
+  .bar-row {
+    grid-template-columns: 5.5rem 1fr 5rem;
+  }
+}
+
+.bar-row__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bar-row__track {
+  height: 0.6rem;
+  background-color: var(--brand-light);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar-row__fill {
+  display: block;
+  height: 100%;
+  background-color: var(--brand);
+  border-radius: 999px;
+}
+
+/* flex ולא שני מספרים זה לצד זה בתוך טקסט: רצף ספרות בשורה דו-כיוונית
+   נדחס למקטע אחד, והמספר והאחוז נצמדים זה לזה בלי רווח */
+.bar-row__value {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+
+.bar-row__count {
+  font-weight: 700;
+}
+
+.bar-row__share {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.analysis-empty {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.analysis-empty i {
+  display: block;
+  font-size: 2rem;
+  color: var(--brand-border);
+  margin-bottom: 0.5rem;
+}
+
+.analysis-empty__title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* ---------------- Login page ---------------- */
+
+.login-wrap {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* פס המותג חוזר גם במסך ההתחברות */
+.login-card__stripe {
+  height: 4px;
+  background: linear-gradient(
+    to left,
+    var(--stripe-1) 0 25%,
+    var(--stripe-2) 25% 50%,
+    var(--stripe-3) 50% 75%,
+    var(--stripe-4) 75% 100%
+  );
+}
+
+.login-card .login-logo {
+  height: 72px;
+  width: auto;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------------- Footer ---------------- */
+
+.site-footer {
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  font-size: var(--text-sm);
+}
+
+/* ---------------- PDF viewer frame ---------------- */
+
+.pdf-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* ---------------- Event handling (אב-טיפוס) ---------------- */
+
+/* שלושת הסטטוסים נשענים על צבעי הסטטוס הקיימים, כדי שלא ייווצר סט צבעים שני במערכת */
+.handling-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.handling-badge--open {
+  background-color: var(--brand-light);
+  border-color: var(--brand-border);
+  color: var(--ink-soft);
+}
+
+.handling-badge--progress {
+  background-color: var(--pending-bg);
+  border-color: var(--pending);
+  color: var(--pending);
+}
+
+.handling-badge--done {
+  background-color: var(--ok-bg);
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+.kpi--open {
+  border-top-color: var(--brand-border);
+}
+
+.kpi--progress {
+  border-top-color: var(--pending);
+}
+
+.kpi--done {
+  border-top-color: var(--ok);
+}
+
+.handling-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  font-size: var(--text-sm);
+  margin-bottom: 1rem;
+}
+
+.overdue-flag {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+/* חריגה מתאריך היעד מסומנת בפס בצד השורה, לא בצביעת השורה כולה -
+   הטבלה נשארת קריאה גם כשיש כמה חריגות זו אחר זו */
+.table tr.is-overdue td:first-child {
+  box-shadow: inset -3px 0 0 var(--danger);
+}
+
+/* ---------------- Handling log ---------------- */
+
+.handling-log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.handling-log__item {
+  border-inline-start: 2px solid var(--brand-border);
+  padding: 0 0 0.9rem 0;
+  padding-inline-start: 0.9rem;
+  position: relative;
+}
+
+.handling-log__item:last-child {
+  padding-bottom: 0;
+  border-inline-start-color: transparent;
+}
+
+.handling-log__item::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -5px;
+  top: 0.35rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand);
+}
+
+.handling-log__meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.handling-log__author::before {
+  content: "· ";
+}
+
+.handling-log__text {
+  white-space: pre-wrap;
+}
+
+/* ---------------- Checklist sub-sections (ביקורת פתע) ---------------- */
+
+/* תג מספרי בטבלה. עומד בפני עצמו ולא נשען על תגי מודול אחר, כדי שהסרת מודול
+   לא תשאיר כאן מספר בלי עיצוב. */
+.count-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  border: 1px solid transparent;
+}
+
+.count-badge--alert {
+  background-color: var(--danger-bg);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* שורת תת-מקטע בטופס: כותרת בלבד, בלי תיבות סימון. הרקע הבהיר מפריד
+   את הקבוצה מהסעיפים הרגילים שסביבה, בלי קו צבע נוסף. */
+.checklist-group td {
+  background-color: var(--brand-light);
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+/* תת-סעיף מוזח פנימה (RTL - הזחה מימין) ומסומן בקו דק, כדי שיהיה ברור
+   לאיזו כותרת הוא שייך גם כשהטבלה ארוכה. */
+.checklist-child {
+  padding-right: 2rem !important;
+  position: relative;
+}
+
+.checklist-child::before {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 0.55rem;
+  bottom: 0.55rem;
+  border-right: 2px solid var(--brand-border);
+}
+
+/* ---------------- Security guard folder (תיקיית מאבטח) ---------------- */
+
+.guard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.guard-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.25rem 0.75rem 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  transition: transform var(--base) var(--ease-out),
+              box-shadow var(--base) var(--ease-out),
+              border-color var(--base) var(--ease-out);
+}
+
+/* אותו סמל כמו בשאר האריחים (Bootstrap Icons), בעיגול בצבע המותג */
+.guard-card__avatar,
+.guard-title__avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--brand-light);
+  border: 1px solid var(--brand-border);
+  color: var(--brand);
+  line-height: 1;
+}
+
+.guard-card__avatar {
+  width: 72px;
+  height: 72px;
+  font-size: 2.4rem;
+}
+
+.guard-card__name {
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/* התפקיד צמוד לשם שמעליו - ה-gap של הכרטיס גדול מדי בין שתי שורות טקסט */
+.guard-card__role {
+  margin-top: -0.45rem;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a.guard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--brand-border);
+  }
+}
+
+a.guard-card:active {
+  transform: scale(0.98);
+}
+
+.guard-inactive {
+  margin-top: 2rem;
+  color: var(--ink-soft);
+}
+
+.guard-inactive summary {
+  cursor: pointer;
+  font-size: var(--text-sm);
+}
+
+.guard-inactive ul {
+  margin: 0.75rem 0 0;
+  padding-inline-start: 1.25rem;
+}
+
+.guard-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.guard-title__avatar {
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+}
+
+.guard-title__badge {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--pending);
+  background-color: var(--pending-bg);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+}
+
+/* התפריט הצדדי: ב-RTL העמודה הראשונה בגריד היא הימנית */
+.guard-folder {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.guard-tabs {
+  gap: 0.25rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.guard-tabs__link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink-soft);
+  font-weight: 500;
+  text-align: start;
+  transition: background-color var(--fast) var(--ease-out), color var(--fast) var(--ease-out);
+}
+
+.guard-tabs__link:hover {
+  background-color: var(--brand-light);
+  color: var(--ink);
+}
+
+.guard-tabs__link.active {
+  background-color: var(--brand);
+  color: #fff;
+}
+
+.guard-pane {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.guard-pane__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.guard-pane__head h4 {
+  margin: 0;
+  font-size: var(--text-lg);
+}
+
+.guard-pane__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.guard-table {
+  margin-bottom: 0.75rem;
+}
+
+.guard-table td:not(:first-child) {
+  min-width: 150px;
+}
+
+/* X = טרם בוצע. אדום עמום מפסי הלוגו - בולט, בלי לצעוק */
+.guard-x {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.guard-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem 2rem;
+  margin: 0;
+}
+
+.guard-facts dt {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-bottom: 0.2rem;
+}
+
+.guard-facts dd {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: 0;
+}
+
+.guard-facts__sub {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.guard-status {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.guard-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.guard-form {
+  max-width: 760px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+/* בטלפון התפריט עולה מעל התוכן ונפרס לרוחב */
+@media (max-width: 767.98px) {
+  .guard-folder {
+    grid-template-columns: 1fr;
+  }
+
+  .guard-tabs {
+    position: static;
+  }
+}
+
+/* ---------------- Duty manager certification ---------------- */
+
+/* שורת ההסמכה בדף המנהל, מתחת לטלפון */
+.duty-cert {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.duty-cert__label {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  margin-bottom: 0.35rem;
+}
+
+.duty-cert__value {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.duty-cert__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.25rem 0.85rem;
+  color: var(--pending);
+  background-color: var(--pending-bg);
+}
+
+.duty-cert__status--signed {
+  color: var(--ok);
+  background-color: var(--ok-bg);
+  text-decoration: none;
+}
+
+.duty-cert__status--signed:hover {
+  text-decoration: underline;
+}
+
+.duty-cert__sub {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+/* מסך ההחתמה */
+.cert-doc {
+  margin-bottom: 1.5rem;
+}
+
+.cert-doc__frame {
+  display: block;
+  width: 100%;
+  height: 70vh;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+}
+
+.cert-doc__open {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: var(--text-sm);
+}
+
+.cert-section {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.cert-section__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+.sig-pad {
+  margin-top: 1rem;
+  max-width: 520px;
+}
+
+.sig-pad__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+/* touch-action: none - אחרת האצבע גוללת את הדף במקום לצייר */
+.sig-pad__canvas {
+  display: block;
+  width: 100%;
+  height: 160px;
+  border: 2px dashed var(--brand-border);
+  border-radius: var(--radius-sm);
+  background-color: #fff;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.sig-pad--signed .sig-pad__canvas {
+  border-style: solid;
+  border-color: var(--brand);
+}
+
+.cert-note {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+/* ---------------- Reduced motion ---------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .tile,
+  .guard-card,
+  .btn {
+    transition: none;
+  }
+
+  a.tile:hover,
+  a.tile:active,
+  a.guard-card:hover,
+  a.guard-card:active,
+  .btn:active {
+    transform: none;
+  }
+}

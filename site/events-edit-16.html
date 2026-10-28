@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#x5D8;&#x5D9;&#x5D5;&#x5D8;&#x5D4; - &#x5D0;&#x5D9;&#x5E8;&#x5D5;&#x5E2; 16 - פורטל ביטחון</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <link rel="stylesheet" href="demo/demo.css" />
+</head>
+<body>
+    <header b-9ud7xt2yc2>
+        <nav b-9ud7xt2yc2 class="navbar navbar-expand-sm site-navbar mb-4">
+            <div b-9ud7xt2yc2 class="container-fluid">
+                <a class="navbar-brand" href="home.html">
+                    <img src="assets/images/logo.png" alt="" />
+                    <span b-9ud7xt2yc2>פורטל ביטחון</span>
+                </a>
+                    <div b-9ud7xt2yc2 class="d-flex align-items-center gap-3">
+                        <span b-9ud7xt2yc2 class="user-chip">
+                            <i b-9ud7xt2yc2 class="bi bi-person-circle"></i>
+                            &#x5E0;&#x5D5;&#x5E2;&#x5D4;
+                            (&#x5E7;&#x5D1;&#x5D8;)
+                        </span>
+                        <a class="btn btn-outline-secondary btn-sm" title="החלפת סיסמה" aria-label="החלפת סיסמה" href="account-changepassword.html">
+                            <i b-9ud7xt2yc2 class="bi bi-key"></i>
+                        </a>
+                        <form method="post" class="m-0" action="#" data-demo-action="app:/Account/Logout">
+                            <button b-9ud7xt2yc2 type="submit" class="btn btn-outline-secondary btn-sm">
+                                <i b-9ud7xt2yc2 class="bi bi-box-arrow-left"></i>
+                                התנתקות
+                            </button>
+                        <input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+                    </div>
+            </div>
+        </nav>
+    </header>
+    <div b-9ud7xt2yc2 class="container">
+        <main b-9ud7xt2yc2 role="main" class="pb-3">
+            
+<div class="page-head">
+    <h2>
+טיוטה - אירוע מספר 16
+            <span class="draft-badge">טיוטה</span>
+    </h2>
+    <div class="page-head__actions">
+            <a class="btn btn-outline-secondary btn-sm" href="events-drafts.html">
+                <i class="bi bi-file-earmark-text"></i>
+                טיוטות (2)
+            </a>
+        <a class="btn btn-outline-secondary btn-sm" href="events.html">
+            <i class="bi bi-arrow-right"></i>
+            חזרה לדו"ח אירועים
+        </a>
+    </div>
+</div>
+
+
+<div class="alert alert-danger validation-summary-valid" role="alert" style="display:none" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+
+<form method="post" enctype="multipart/form-data" id="eventForm" action="#" data-demo-action="app:/Events/Create" data-demo-target="events-create.html">
+    <input type="hidden" name="DraftEventId" value="16" />
+    <input type="hidden" name="SaveMode" id="SaveMode" value="final" />
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">מספר סימוכין</label>
+                    <input type="text" class="form-control tabular" value="16" readonly disabled />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="EventDate">תאריך</label>
+                    <input type="date" id="EventDate" name="EventDate" class="form-control"
+                           value="2026-10-28" required />
+                </div>
+                <div class="col-md-4 emp-picker">
+                    <label class="form-label" for="reporterSearch">מדווח</label>
+                    <input type="text" id="reporterSearch" class="form-control emp-picker__input"
+                           autocomplete="off" placeholder="שם, או תעודת זהות מלאה" value="" />
+                    <input type="hidden" name="ReporterEmployeeId" class="emp-picker__code" />
+                    <div class="emp-picker__menu" hidden></div>
+                    <div class="form-text">מתוך רשימת העובדים. אפשר להשאיר ריק.</div>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-0">
+                <div class="col-md-4">
+                    <label class="form-label" for="EventType">סוג אירוע</label>
+                    <select id="EventType" name="EventType" class="form-select" required>
+                        <option value="">בחר...</option>
+                            <option value="&#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA;">&#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA;</option>
+                            <option value="&#x5D7;&#x5E8;&#x5D9;&#x5D2;" selected="selected">&#x5D7;&#x5E8;&#x5D9;&#x5D2;</option>
+                            <option value="&#x5D7;&#x5D5;&#x5DE;&#x5E8;&#x5D9;&#x5DD; &#x5DE;&#x5E1;&#x5D5;&#x5DB;&#x5E0;&#x5D9;&#x5DD;">&#x5D7;&#x5D5;&#x5DE;&#x5E8;&#x5D9;&#x5DD; &#x5DE;&#x5E1;&#x5D5;&#x5DB;&#x5E0;&#x5D9;&#x5DD;</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="Classification">סיווג</label>
+                    <select id="Classification" name="Classification" class="form-select" required>
+                        <option value="">בחר סוג אירוע תחילה</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" for="DepartmentNumber">שם מחלקה</label>
+                    <select id="DepartmentNumber" name="DepartmentNumber" class="form-select">
+                        <option value="">בחר...</option>
+                            <option value="100">&#x5D4;&#x5E0;&#x5D4;&#x5DC;&#x5D4; &#x5E8;&#x5D0;&#x5E9;&#x5D9;&#x5EA;</option>
+                            <option value="300">&#x5DE;&#x5DB;&#x5D9;&#x5E8;&#x5D5;&#x5EA; &#x5D5;&#x5E9;&#x5D9;&#x5E8;&#x5D5;&#x5EA; &#x5DC;&#x5E7;&#x5D5;&#x5D7;&#x5D5;&#x5EA;</option>
+                            <option value="200">&#x5DB;&#x5E1;&#x5E4;&#x5D9;&#x5DD;</option>
+                            <option value="400">&#x5DE;&#x5E0;&#x5D4;&#x5DC;&#x5D4;</option>
+                            <option value="500">&#x5DE;&#x5E2;&#x5E8;&#x5DB;&#x5D5;&#x5EA; &#x5DE;&#x5D9;&#x5D3;&#x5E2;</option>
+                            <option value="600">&#x5DE;&#x5E9;&#x5D0;&#x5D1;&#x5D9; &#x5D0;&#x5E0;&#x5D5;&#x5E9;</option>
+                            <option value="701">&#x5E8;&#x5D9;&#x5E7;&#x5D5;&#x5DF; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;</option>
+                            <option value="702">&#x5E9;&#x5D9;&#x5D2;&#x5D5;&#x5E8; &#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;</option>
+                            <option value="703">&#x5E7;&#x5DC;&#x5D9;&#x5D8;&#x5EA; &#x5DE;&#x5D8;&#x5E2;&#x5E0;&#x5D9;&#x5DD;</option>
+                            <option value="704">&#x5E1;&#x5DB;&#x5DB;&#x5EA; &#x5DE;&#x5DB;&#x5E1;</option>
+                            <option value="705">&#x5E8;&#x5DB;&#x5D1;&#x5D9;&#x5DD;</option>
+                            <option value="801">&#x5D7;&#x5E6;&#x5E8; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;</option>
+                            <option value="802" selected="selected">&#x5E9;&#x5E2;&#x5E8;&#x5D9;&#x5DD;</option>
+                            <option value="803">&#x5E1;&#x5D9;&#x5D3;&#x5D5;&#x5E8; &#x5E2;&#x5D1;&#x5D5;&#x5D3;&#x5D4;</option>
+                            <option value="900">&#x5DE;&#x5D5;&#x5E1;&#x5DA;</option>
+                            <option value="1000">&#x5DE;&#x5D7;&#x5E1;&#x5DF; &#x5E6;&#x5E4;&#x5D5;&#x5E0;&#x5D9;</option>
+                            <option value="1100">&#x5E8;&#x5DB;&#x5E9; &#x5D5;&#x5EA;&#x5D7;&#x5D6;&#x5D5;&#x5E7;&#x5D4;</option>
+                    </select>
+                    <div class="form-text" id="departmentManager"></div>
+                </div>
+                <div class="col-md-4 hazmat-only" hidden="hidden">
+                    <label class="form-label" for="RiskGroup">קבוצת סיכון</label>
+                    <select id="RiskGroup" name="RiskGroup" class="form-select" required disabled="disabled">
+                        <option value="">בחר...</option>
+                            <option value="2.2">2.2</option>
+                            <option value="3">3</option>
+                            <option value="4.2">4.2</option>
+                            <option value="5.1">5.1</option>
+                            <option value="6.1">6.1</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="involved-head">
+                <h5 class="mb-0">גורם המעורב</h5>
+                <button type="button" class="btn btn-outline-primary btn-sm involved-add" id="addInvolvedBtn"
+                        title="הוספת גורם מעורב נוסף" aria-label="הוספת גורם מעורב נוסף">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+            </div>
+
+            <div id="involvedRows">
+                    <div class="involved-row">
+                        <div class="involved-row__head">
+                            <span class="involved-row__title">גורם מעורב 1</span>
+                            <button type="button" class="btn btn-outline-secondary btn-sm involved-remove"
+                                    title="הסרת הגורם" aria-label="הסרת הגורם">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">סוג גורם</label>
+                                <select name="InvolvedParties[0].PartyKind" class="form-select party-kind">
+                                    <option value="">בחר...</option>
+                                        <option value="&#x5E4;&#x5E0;&#x5D9;&#x5DD; &#x5D0;&#x5E8;&#x5D2;&#x5D5;&#x5E0;&#x5D9;" selected="selected">&#x5E4;&#x5E0;&#x5D9;&#x5DD; &#x5D0;&#x5E8;&#x5D2;&#x5D5;&#x5E0;&#x5D9;</option>
+                                        <option value="&#x5D7;&#x5D9;&#x5E6;&#x5D5;&#x5E0;&#x5D9;">&#x5D7;&#x5D9;&#x5E6;&#x5D5;&#x5E0;&#x5D9;</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-0 party-internal">
+                            <div class="col-md-3 emp-picker">
+                                <label class="form-label">עובד</label>
+                                <input type="text" class="form-control tabular emp-picker__input"
+                                       autocomplete="off" placeholder="שם, או תעודת זהות מלאה"
+                                       value="&#x200E;*****2345 - &#x5D9;&#x5D5;&#x5E1;&#x5D9; &#x5DB;&#x5D4;&#x5DF;" />
+                                <input type="hidden" name="InvolvedParties[0].EmployeeId" class="emp-picker__code"
+                                       value="1" />
+                                <div class="emp-picker__menu" hidden></div>
+                                <div class="form-text emp-picker__status"></div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">שם עובד</label>
+                                <input type="text" class="form-control emp-field" data-emp-field="fullName"
+                                       value="&#x5D9;&#x5D5;&#x5E1;&#x5D9; &#x5DB;&#x5D4;&#x5DF;" readonly disabled />
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">מחלקה</label>
+                                <input type="text" class="form-control emp-field" data-emp-field="department"
+                                       value="&#x5D7;&#x5E6;&#x5E8; &#x5DE;&#x5DB;&#x5D5;&#x5DC;&#x5D5;&#x5EA;" readonly disabled />
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">תפקיד</label>
+                                <input type="text" class="form-control emp-field" data-emp-field="jobTitle"
+                                       value="&#x5DE;&#x5E4;&#x5E2;&#x5D9;&#x5DC; &#x5DE;&#x5DC;&#x5D2;&#x5D6;&#x5D4;" readonly disabled />
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mt-0 party-external" hidden="hidden">
+                            <div class="col-md-4">
+                                <label class="form-label">סוג גורם חיצוני</label>
+                                <select name="InvolvedParties[0].ExternalKind" class="form-select">
+                                    <option value="">בחר...</option>
+                                        <option value="&#x5E1;&#x5E4;&#x5E7;">&#x5E1;&#x5E4;&#x5E7;</option>
+                                        <option value="&#x5DC;&#x5E7;&#x5D5;&#x5D7;">&#x5DC;&#x5E7;&#x5D5;&#x5D7;</option>
+                                        <option value="&#x5E7;&#x5D1;&#x5DC;&#x5DF;">&#x5E7;&#x5D1;&#x5DC;&#x5DF;</option>
+                                        <option value="&#x5D0;&#x5D7;&#x5E8;">&#x5D0;&#x5D7;&#x5E8;</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">שם</label>
+                                <input type="text" name="InvolvedParties[0].FullName" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">תפקיד</label>
+                                <input type="text" name="InvolvedParties[0].JobTitle" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">חברה</label>
+                                <input type="text" name="InvolvedParties[0].Company" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">טלפון</label>
+                                <input type="text" name="InvolvedParties[0].Phone" class="form-control tabular" placeholder="050-1234567"
+                                       pattern="(0\d{1,2}[ \-]?\d{7}|\+972[ \-]?\d{1,2}[ \-]?\d{7})"
+                                       title="050-1234567 או 03-1234567 או ‎+972-50-1234567 (המקף אינו חובה)" />
+                                <div class="form-text">מבנה: 050-1234567, 03-1234567 או ‎+972-50-1234567 (המקף אינו חובה)</div>
+                            </div>
+                        </div>
+
+                        <div class="party-roles mt-3">
+                            <label class="form-label">סוג המעורבות באירוע</label>
+                            <div class="role-checks">
+                                    <label class="form-check-label role-check">
+                                        <input type="checkbox" class="form-check-input "
+                                               name="InvolvedParties[0].InvolvementRoles" value="&#x5E0;&#x5E4;&#x5D2;&#x5E2;" />
+                                        <span>&#x5E0;&#x5E4;&#x5D2;&#x5E2;</span>
+                                    </label>
+                                    <label class="form-check-label role-check">
+                                        <input type="checkbox" class="form-check-input role-caused"
+                                               name="InvolvedParties[0].InvolvementRoles" value="&#x5D2;&#x5D5;&#x5E8;&#x5DD; &#x5DC;&#x5D0;&#x5D9;&#x5E8;&#x5D5;&#x5E2;"
+                                               checked="checked" />
+                                        <span>&#x5D2;&#x5D5;&#x5E8;&#x5DD; &#x5DC;&#x5D0;&#x5D9;&#x5E8;&#x5D5;&#x5E2;</span>
+                                    </label>
+                                    <label class="form-check-label role-check">
+                                        <input type="checkbox" class="form-check-input "
+                                               name="InvolvedParties[0].InvolvementRoles" value="&#x5DC;&#x5D0; &#x5D0;&#x5E9;&#x5DD;" />
+                                        <span>&#x5DC;&#x5D0; &#x5D0;&#x5E9;&#x5DD;</span>
+                                    </label>
+                                    <label class="form-check-label role-check">
+                                        <input type="checkbox" class="form-check-input "
+                                               name="InvolvedParties[0].InvolvementRoles" value="&#x5E2;&#x5D3;" />
+                                        <span>&#x5E2;&#x5D3;</span>
+                                    </label>
+                                    <label class="form-check-label role-check">
+                                        <input type="checkbox" class="form-check-input "
+                                               name="InvolvedParties[0].InvolvementRoles" value="&#x5DE;&#x5D3;&#x5D5;&#x5D5;&#x5D7;" />
+                                        <span>&#x5DE;&#x5D3;&#x5D5;&#x5D5;&#x5D7;</span>
+                                    </label>
+                            </div>
+                            <div class="form-text">אפשר לסמן יותר מאחד.</div>
+                        </div>
+
+                        <div class="party-history mt-3" hidden></div>
+
+                        <div class="party-severity mt-3" hidden>
+                            <h6 class="party-severity__title">הערכת חומרת המעורבות</h6>
+                            <div class="form-text mb-2">
+                                סימון תא אחד בכל שורה שרלוונטית. שורה שלא סומנה לא תישמר.
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered align-middle mb-0 severity-table">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>סיווג</th>
+                                                <th>&#x5E7;&#x5DC;</th>
+                                                <th>&#x5D1;&#x5D9;&#x5E0;&#x5D5;&#x5E0;&#x5D9;</th>
+                                                <th>&#x5DE;&#x5E9;&#x5DE;&#x5E2;&#x5D5;&#x5EA;&#x5D9; / &#x5D7;&#x5DE;&#x5D5;&#x5E8;</th>
+                                                <th>&#x5D7;&#x5DE;&#x5D5;&#x5E8; / &#x5E7;&#x5E8;&#x5D9;&#x5D8;&#x5D9;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    &#x5E4;&#x5D2;&#x5D9;&#x5E2;&#x5D4; &#x5D1;&#x5D2;&#x5D5;&#x5E3;
+                                                    <input type="hidden" name="InvolvedParties[0].SafetyPicks[0].Category" value="&#x5E4;&#x5D2;&#x5D9;&#x5E2;&#x5D4; &#x5D1;&#x5D2;&#x5D5;&#x5E3;" />
+                                                </th>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[0].Level" value="&#x5E7;&#x5DC;" />
+                                                            <span>&#x5DB;&#x5DE;&#x5E2;&#x5D8; &#x5E4;&#x5D2;&#x5D9;&#x5E2;&#x5D4; / &#x5DC;&#x5DC;&#x5D0; &#x5E4;&#x5D2;&#x5D9;&#x5E2;&#x5D4;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[0].Level" value="&#x5D1;&#x5D9;&#x5E0;&#x5D5;&#x5E0;&#x5D9;" />
+                                                            <span>&#x5E4;&#x5D2;&#x5D9;&#x5E2;&#x5D4; &#x5E7;&#x5DC;&#x5D4;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[0].Level" value="&#x5DE;&#x5E9;&#x5DE;&#x5E2;&#x5D5;&#x5EA;&#x5D9; / &#x5D7;&#x5DE;&#x5D5;&#x5E8;" />
+                                                            <span>&#x5E4;&#x5D2;&#x5D9;&#x5E2;&#x5D4; &#x5D4;&#x5DE;&#x5D7;&#x5D9;&#x5D9;&#x5D1;&#x5EA; &#x5D8;&#x5D9;&#x5E4;&#x5D5;&#x5DC; &#x5E8;&#x5E4;&#x5D5;&#x5D0;&#x5D9; / &#x5D4;&#x5D9;&#x5E2;&#x5D3;&#x5E8;&#x5D5;&#x5EA;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[0].Level" value="&#x5D7;&#x5DE;&#x5D5;&#x5E8; / &#x5E7;&#x5E8;&#x5D9;&#x5D8;&#x5D9;" />
+                                                            <span>&#x5E4;&#x5D2;&#x5D9;&#x5E2;&#x5D4; &#x5E7;&#x5E9;&#x5D4; / &#x5D0;&#x5E9;&#x5E4;&#x5D5;&#x5D6; / &#x5E1;&#x5DB;&#x5E0;&#x5EA; &#x5D7;&#x5D9;&#x5D9;&#x5DD;</span>
+                                                        </label>
+                                                    </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    &#x5E0;&#x5D6;&#x5E7; &#x5DC;&#x5E8;&#x5DB;&#x5D5;&#x5E9;
+                                                    <input type="hidden" name="InvolvedParties[0].SafetyPicks[1].Category" value="&#x5E0;&#x5D6;&#x5E7; &#x5DC;&#x5E8;&#x5DB;&#x5D5;&#x5E9;" />
+                                                </th>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[1].Level" value="&#x5E7;&#x5DC;" />
+                                                            <span>&#x5E2;&#x5D3; 1,000 &#x20AA;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[1].Level" value="&#x5D1;&#x5D9;&#x5E0;&#x5D5;&#x5E0;&#x5D9;" />
+                                                            <span>1,001-6,000 &#x20AA;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[1].Level" value="&#x5DE;&#x5E9;&#x5DE;&#x5E2;&#x5D5;&#x5EA;&#x5D9; / &#x5D7;&#x5DE;&#x5D5;&#x5E8;" />
+                                                            <span>6,001-10,000 &#x20AA;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[1].Level" value="&#x5D7;&#x5DE;&#x5D5;&#x5E8; / &#x5E7;&#x5E8;&#x5D9;&#x5D8;&#x5D9;" />
+                                                            <span>&#x5DE;&#x5E2;&#x5DC; 10,000 &#x20AA; / &#x5E0;&#x5D6;&#x5E7; &#x5DE;&#x5E9;&#x5DE;&#x5E2;&#x5D5;&#x5EA;&#x5D9;</span>
+                                                        </label>
+                                                    </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    &#x5D4;&#x5E4;&#x5E8;&#x5EA; &#x5E0;&#x5D5;&#x5D4;&#x5DC;
+                                                    <input type="hidden" name="InvolvedParties[0].SafetyPicks[2].Category" value="&#x5D4;&#x5E4;&#x5E8;&#x5EA; &#x5E0;&#x5D5;&#x5D4;&#x5DC;" />
+                                                </th>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[2].Level" value="&#x5E7;&#x5DC;" />
+                                                            <span>&#x5D4;&#x5E4;&#x5E8;&#x5D4; &#x5D6;&#x5D5;&#x5D8;&#x5E8;&#x5D4; / &#x5D2;&#x5D1;&#x5D5;&#x5DC;&#x5D9;&#x5EA;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[2].Level" value="&#x5D1;&#x5D9;&#x5E0;&#x5D5;&#x5E0;&#x5D9;" />
+                                                            <span>&#x5D7;&#x5E8;&#x5D9;&#x5D2;&#x5D4; &#x5DE;&#x5D4;&#x5E0;&#x5D5;&#x5D4;&#x5DC;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[2].Level" value="&#x5DE;&#x5E9;&#x5DE;&#x5E2;&#x5D5;&#x5EA;&#x5D9; / &#x5D7;&#x5DE;&#x5D5;&#x5E8;" />
+                                                            <span>&#x5D4;&#x5E4;&#x5E8;&#x5D4; &#x5DE;&#x5D4;&#x5D5;&#x5EA;&#x5D9;&#x5EA;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[2].Level" value="&#x5D7;&#x5DE;&#x5D5;&#x5E8; / &#x5E7;&#x5E8;&#x5D9;&#x5D8;&#x5D9;" />
+                                                            <span>&#x5D4;&#x5E4;&#x5E8;&#x5D4; &#x5D7;&#x5DE;&#x5D5;&#x5E8;&#x5D4; / &#x5D7;&#x5D5;&#x5D6;&#x5E8;&#x5EA;</span>
+                                                        </label>
+                                                    </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    &#x5E1;&#x5D9;&#x5DB;&#x5D5;&#x5DF; &#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA;&#x5D9;
+                                                    <input type="hidden" name="InvolvedParties[0].SafetyPicks[3].Category" value="&#x5E1;&#x5D9;&#x5DB;&#x5D5;&#x5DF; &#x5D1;&#x5D8;&#x5D9;&#x5D7;&#x5D5;&#x5EA;&#x5D9;" />
+                                                </th>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[3].Level" value="&#x5E7;&#x5DC;" />
+                                                            <span>&#x5E0;&#x5DE;&#x5D5;&#x5DA;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[3].Level" value="&#x5D1;&#x5D9;&#x5E0;&#x5D5;&#x5E0;&#x5D9;" />
+                                                            <span>&#x5D1;&#x5D9;&#x5E0;&#x5D5;&#x5E0;&#x5D9;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[3].Level" value="&#x5DE;&#x5E9;&#x5DE;&#x5E2;&#x5D5;&#x5EA;&#x5D9; / &#x5D7;&#x5DE;&#x5D5;&#x5E8;" />
+                                                            <span>&#x5D2;&#x5D1;&#x5D5;&#x5D4;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[3].Level" value="&#x5D7;&#x5DE;&#x5D5;&#x5E8; / &#x5E7;&#x5E8;&#x5D9;&#x5D8;&#x5D9;" />
+                                                            <span>&#x5E1;&#x5D9;&#x5DB;&#x5D5;&#x5DF; &#x5D7;&#x5DE;&#x5D5;&#x5E8; / &#x5DE;&#x5D9;&#x5D9;&#x5D3;&#x5D9;</span>
+                                                        </label>
+                                                    </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">
+                                                    &#x5E9;&#x5D9;&#x5EA;&#x5D5;&#x5E3; &#x5E4;&#x5E2;&#x5D5;&#x5DC;&#x5D4;
+                                                    <input type="hidden" name="InvolvedParties[0].SafetyPicks[4].Category" value="&#x5E9;&#x5D9;&#x5EA;&#x5D5;&#x5E3; &#x5E4;&#x5E2;&#x5D5;&#x5DC;&#x5D4;" />
+                                                </th>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[4].Level" value="&#x5E7;&#x5DC;" />
+                                                            <span>&#x5E9;&#x5D9;&#x5EA;&#x5D5;&#x5E3; &#x5E4;&#x5E2;&#x5D5;&#x5DC;&#x5D4; &#x5DE;&#x5DC;&#x5D0;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[4].Level" value="&#x5D1;&#x5D9;&#x5E0;&#x5D5;&#x5E0;&#x5D9;" />
+                                                            <span>&#x5E9;&#x5D9;&#x5EA;&#x5D5;&#x5E3; &#x5E4;&#x5E2;&#x5D5;&#x5DC;&#x5D4; &#x5D7;&#x5DC;&#x5E7;&#x5D9;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[4].Level" value="&#x5DE;&#x5E9;&#x5DE;&#x5E2;&#x5D5;&#x5EA;&#x5D9; / &#x5D7;&#x5DE;&#x5D5;&#x5E8;" />
+                                                            <span>&#x5D7;&#x5D5;&#x5E1;&#x5E8; &#x5E9;&#x5D9;&#x5EA;&#x5D5;&#x5E3; &#x5E4;&#x5E2;&#x5D5;&#x5DC;&#x5D4;</span>
+                                                        </label>
+                                                    </td>
+                                                    <td class="">
+                                                        <label class="severity-cell">
+                                                            <input type="radio" class="form-check-input"
+                                                                   name="InvolvedParties[0].SafetyPicks[4].Level" value="&#x5D7;&#x5DE;&#x5D5;&#x5E8; / &#x5E7;&#x5E8;&#x5D9;&#x5D8;&#x5D9;" />
+                                                            <span>&#x5D4;&#x5EA;&#x5E0;&#x5D2;&#x5D3;&#x5D5;&#x5EA; / &#x5D4;&#x5E1;&#x5EA;&#x5E8;&#x5EA; &#x5DE;&#x5D9;&#x5D3;&#x5E2; / &#x5D4;&#x5E4;&#x5E8;&#x5E2;&#x5D4; &#x5DC;&#x5D1;&#x5D9;&#x5E8;&#x5D5;&#x5E8;</span>
+                                                        </label>
+                                                    </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <button type="button" class="btn btn-outline-secondary btn-sm mt-2 severity-clear">
+                                ניקוי הסימונים
+                            </button>
+
+                            <div class="severity-decision row g-3 mt-2">
+                                <div class="col-md-4">
+                                    <label class="form-label">חומרת המעורבות</label>
+                                    <select name="InvolvedParties[0].Severity" class="form-select party-severity__select">
+                                        <option value="">בחר...</option>
+                                            <option value="&#x5E7;&#x5DC;">&#x5E7;&#x5DC;</option>
+                                            <option value="&#x5D1;&#x5D9;&#x5E0;&#x5D5;&#x5E0;&#x5D9;">&#x5D1;&#x5D9;&#x5E0;&#x5D5;&#x5E0;&#x5D9;</option>
+                                            <option value="&#x5DE;&#x5E9;&#x5DE;&#x5E2;&#x5D5;&#x5EA;&#x5D9; / &#x5D7;&#x5DE;&#x5D5;&#x5E8;">&#x5DE;&#x5E9;&#x5DE;&#x5E2;&#x5D5;&#x5EA;&#x5D9; / &#x5D7;&#x5DE;&#x5D5;&#x5E8;</option>
+                                            <option value="&#x5D7;&#x5DE;&#x5D5;&#x5E8; / &#x5E7;&#x5E8;&#x5D9;&#x5D8;&#x5D9;">&#x5D7;&#x5DE;&#x5D5;&#x5E8; / &#x5E7;&#x5E8;&#x5D9;&#x5D8;&#x5D9;</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-8 severity-decision__note">
+                                    <div class="form-text mb-0 party-severity__hint"></div>
+                                </div>
+                            </div>
+
+                            <div class="severity-change mt-3" hidden>
+                                <label class="form-label">הסבר לשינוי החומרה <span class="text-danger">*</span></label>
+                                <div class="severity-change__box">
+                                    <span class="severity-change__prefix"></span>
+                                    <textarea name="InvolvedParties[0].SeverityChangeReason"
+                                              class="severity-change__text" rows="2" maxlength="1000"
+                                              placeholder="המשך ההסבר..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="form-text">ניתן להוסיף כמה גורמים מעורבים שצריך. שורה שנשארה ריקה לא תישמר.</div>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="mb-3">
+                <label class="form-label" for="Details" id="detailsLabel">&#x5E4;&#x5E8;&#x5D8;&#x5D9; &#x5D4;&#x5D0;&#x5D9;&#x5E8;&#x5D5;&#x5E2;</label>
+                <textarea id="Details" name="Details" class="form-control" rows="5">&#x5D4;&#x5EA;&#x5E7;&#x5D4;&#x5DC;&#x5D5;&#x5EA; &#x5E0;&#x5D4;&#x5D2;&#x5D9;&#x5DD; &#x5D1;&#x5E9;&#x5E2;&#x5E8; &#x5D4;&#x5D9;&#x5E6;&#x5D9;&#x5D0;&#x5D4; &#x5D1;&#x5E2;&#x5E7;&#x5D1;&#x5D5;&#x5EA; &#x5EA;&#x5E7;&#x5DC;&#x5D4; &#x5D1;&#x5DE;&#x5E2;&#x5E8;&#x5DB;&#x5EA;.</textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="reportDocument">או צירוף דו"ח מקובץ Word</label>
+                <input type="file" id="reportDocument" name="reportDocument" class="form-control"
+                       accept=".docx,.doc,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword" />
+                <div class="form-text">
+                    לאירועים שהדו"ח שלהם כבר קיים כקובץ. אפשר לצרף קובץ במקום למלא את פרטי האירוע, או בנוסף.
+                    קובץ docx יוצג בתוך המערכת; doc ישן יהיה זמין להורדה בלבד. עד 10MB.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="attachments">הוספת תמונות</label>
+                <input type="file" id="attachments" name="attachments" class="form-control"
+                       accept="image/*" multiple />
+                <div class="form-text">ניתן לצרף תמונות בלבד, עד 5MB לקובץ.</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="videos">הוספת סרטונים</label>
+                <input type="file" id="videos" name="videos" class="form-control"
+                       accept="video/*,.mp4,.mov,.webm,.avi,.wmv,.mkv,.3gp,.m4v" multiple />
+                <div class="form-text">
+                    עד 100MB לסרטון. mp4 ו-webm מתנגנים בתוך המערכת; פורמטים אחרים יהיו זמינים להורדה בלבד.
+                    העלאת סרטון גדול עשויה לקחת זמן - אין לסגור את הדף עד שההוספה מסתיימת.
+                </div>
+            </div>
+
+            <div class="mb-3 hazmat-only" hidden="hidden">
+                <label class="form-label" for="Recommendations">המלצות</label>
+                <textarea id="Recommendations" name="Recommendations" class="form-control" rows="3"
+                          disabled="disabled"></textarea>
+            </div>
+
+            <div>
+                <label class="form-label" for="Notes">הערות</label>
+                <textarea id="Notes" name="Notes" class="form-control" rows="2"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="event-save-bar">
+        <button type="submit" class="btn btn-primary" value="final" id="eventSaveBtn">
+            &#x5E9;&#x5DE;&#x5D9;&#x5E8;&#x5D4; &#x5E1;&#x5D5;&#x5E4;&#x5D9;&#x5EA;
+        </button>
+        <button type="submit" class="btn btn-outline-secondary" value="draft" id="eventDraftBtn" formnovalidate>
+            <i class="bi bi-file-earmark-text"></i>
+            שמירה כטיוטה
+        </button>
+        <span class="form-text m-0">טיוטה נשמרת בלי לשלוח הודעה לאיש, ואפשר לחזור אליה מרשימת הטיוטות.</span>
+    </div>
+<input name="__RequestVerificationToken" type="hidden" value="demo" /></form>
+
+<script>
+    (function () {
+        var classifications = {"\u05D1\u05D8\u05D9\u05D7\u05D5\u05EA":["\u05E4\u05D2\u05D9\u05E2\u05D4 \u05D1\u05D2\u05D5\u05E3","\u05E0\u05D6\u05E7 \u05DC\u05E8\u05DB\u05D5\u05E9","\u05D4\u05E4\u05E8\u05EA \u05E0\u05D5\u05D4\u05DC","\u05E1\u05D9\u05DB\u05D5\u05DF \u05D1\u05D8\u05D9\u05D7\u05D5\u05EA\u05D9"],"\u05D7\u05E8\u05D9\u05D2":["\u05D0\u05DC\u05D9\u05DE\u05D5\u05EA \u05DE\u05D9\u05DC\u05D5\u05DC\u05D9\u05EA","\u05D0\u05DC\u05D9\u05DE\u05D5\u05EA \u05E4\u05D9\u05D6\u05D9\u05EA","\u05E1\u05D3\u05E8 \u05E6\u05D9\u05D1\u05D5\u05E8\u05D9","\u05D2\u05E0\u05D9\u05D1\u05D4","\u05E4\u05D7\u0022\u05E2","\u05D0\u05D7\u05E8"],"\u05D7\u05D5\u05DE\u05E8\u05D9\u05DD \u05DE\u05E1\u05D5\u05DB\u05E0\u05D9\u05DD":["\u05D7\u05D5\u05DE\u05E8 \u05E0\u05D5\u05D6\u05DC\u05D9","\u05D7\u05D5\u05DE\u05E8 \u05D2\u05D1\u05D9\u05E9\u05D9","\u05D7\u05D5\u05DE\u05E8 \u05DE\u05D5\u05E6\u05E7"]};
+        var partyKinds = {"internalKind":"\u05E4\u05E0\u05D9\u05DD \u05D0\u05E8\u05D2\u05D5\u05E0\u05D9","externalKind":"\u05D7\u05D9\u05E6\u05D5\u05E0\u05D9"};
+        var departmentManagers = {"100":"\u05D0\u05D1\u05D9 \u05E9\u05DE\u05E9","300":"\u05D3\u05E0\u05D4 \u05E7\u05D5\u05E8\u05DF","200":"\u05DC\u05D9\u05D0\u05EA \u05D2\u05D1\u05D0\u05D9","400":"\u05D9\u05E2\u05DC \u05D0\u05D5\u05E8\u05DF","500":"\u05E2\u05D9\u05D3\u05D5 \u05D1\u05DF \u05D3\u05D5\u05D3","600":"\u05E8\u05D9\u05E0\u05EA \u05E1\u05D2\u05DC","701":"\u05E9\u05D7\u05E8 \u05D0\u05D6\u05D5\u05DC\u05D0\u05D9","702":"\u05E7\u05D5\u05D1\u05D9 \u05D7\u05D3\u05D3","703":"\u05D0\u05DC\u05D5\u05DF \u05E4\u05E8\u05E5","704":"\u05DE\u05D5\u05E8\u05DF \u05D8\u05DC","705":"\u05E0\u05D9\u05E8 \u05D0\u05E9\u05DB\u05E0\u05D6\u05D9","801":"\u05D0\u05E1\u05E3 \u05E7\u05DC\u05D9\u05D9\u05DF","802":"\u05E8\u05D5\u05E0\u05DF \u05D0\u05DC\u05DE\u05D5\u05D2","803":"\u05E9\u05D9\u05E8\u05D4 \u05DE\u05D6\u05E8\u05D7\u05D9","900":"\u05D1\u05E0\u05D9 \u05E2\u05DE\u05E8","1000":"\u05D8\u05DC \u05D1\u05D9\u05E8\u05E0\u05D1\u05D0\u05D5\u05DD","1100":"\u05D0\u05D9\u05EA\u05DF \u05E1\u05E4\u05D9\u05E8"};
+        var typeSelect = document.getElementById('EventType');
+        var classSelect = document.getElementById('Classification');
+        var selected = "\u05E1\u05D3\u05E8 \u05E6\u05D9\u05D1\u05D5\u05E8\u05D9";
+
+        function fillClassifications() {
+            var options = classifications[typeSelect.value] || [];
+            classSelect.innerHTML = '';
+            if (options.length === 0) {
+                classSelect.appendChild(new Option('בחר סוג אירוע תחילה', ''));
+                return;
+            }
+            classSelect.appendChild(new Option('בחר...', ''));
+            options.forEach(function (opt) {
+                var o = new Option(opt, opt);
+                if (opt === selected) { o.selected = true; }
+                classSelect.appendChild(o);
+            });
+            // סיווג של אירוע ישן שכבר אינו ברשימה - נשמר כדי שהבחירה לא תיעלם בשקט
+            if (selected && options.indexOf(selected) === -1) {
+                var legacy = new Option(selected, selected);
+                legacy.selected = true;
+                classSelect.appendChild(legacy);
+            }
+        }
+
+        // --- מנהל המחלקה ---
+        // מוצג לצד הבחירה כי הוא זה שהקב"ט מדבר איתו על האירוע
+        var departmentSelect = document.getElementById('DepartmentNumber');
+        var departmentManager = document.getElementById('departmentManager');
+
+        function showDepartmentManager() {
+            var manager = departmentManagers[departmentSelect.value];
+            departmentManager.textContent = manager ? 'מנהל המחלקה: ' + manager : '';
+        }
+
+        departmentSelect.addEventListener('change', showDepartmentManager);
+        showDepartmentManager();
+
+        // --- הערכת חומרת המעורבות: לכל גורם לאירוע באירוע בטיחות ---
+        var safetyType = "\u05D1\u05D8\u05D9\u05D7\u05D5\u05EA";
+        var severityLevels = ["\u05E7\u05DC","\u05D1\u05D9\u05E0\u05D5\u05E0\u05D9","\u05DE\u05E9\u05DE\u05E2\u05D5\u05EA\u05D9 / \u05D7\u05DE\u05D5\u05E8","\u05D7\u05DE\u05D5\u05E8 / \u05E7\u05E8\u05D9\u05D8\u05D9"];
+
+        function suggestedFor(row) {
+            var highest = -1;
+            row.querySelectorAll('.party-severity input[type=radio]:checked').forEach(function (radio) {
+                var index = severityLevels.indexOf(radio.value);
+                if (index > highest) { highest = index; }
+            });
+            return highest < 0 ? '' : severityLevels[highest];
+        }
+
+        // fromTable: הטבלה השתנתה. ברירת המחדל עוקבת אחרי הטבלה כל עוד הקב"ט
+        // לא בחר בעצמו חומרה אחרת - בחירה שלו לא נדרסת בגלל סימון נוסף.
+        function refreshSeverity(row, fromTable) {
+            var select = row.querySelector('.party-severity__select');
+            var hint = row.querySelector('.party-severity__hint');
+            var change = row.querySelector('.severity-change');
+            var prefix = row.querySelector('.severity-change__prefix');
+            var previous = select.dataset.suggested || '';
+            var suggested = suggestedFor(row);
+
+            if (fromTable && (select.value === '' || select.value === previous)) {
+                select.value = suggested;
+            }
+            // אין "בלי חומרה" כשהטבלה סומנה: ריק חוזר לברירת המחדל
+            if (!select.value && suggested) {
+                select.value = suggested;
+            }
+            select.dataset.suggested = suggested;
+
+            hint.textContent = suggested
+                ? 'ברירת המחדל לפי הטבלה: ' + suggested + '. אפשר לשנות, בצירוף הסבר.'
+                : 'אם יסומנו תאים בטבלה, החומרה הגבוהה ביותר תיבחר כברירת מחדל.';
+
+            var changed = suggested && select.value && select.value !== suggested;
+            change.hidden = !changed;
+            prefix.textContent = changed ? 'שונה מ' + suggested + ' ל' + select.value : '';
+        }
+
+        function isCausedParty(row) {
+            var box = row.querySelector('input.role-caused');
+            return box && box.checked;
+        }
+
+        function applyPartySeverity(row) {
+            row.querySelector('.party-severity').hidden =
+                !(typeSelect.value === safetyType && isCausedParty(row));
+        }
+
+        function applyAllPartySeverity() {
+            document.querySelectorAll('#involvedRows .involved-row').forEach(applyPartySeverity);
+        }
+
+        function clearPartySeverity(row) {
+            row.querySelectorAll('.party-severity input[type=radio]').forEach(function (radio) {
+                radio.checked = false;
+            });
+            row.querySelectorAll('.party-severity td.is-selected').forEach(function (cell) {
+                cell.classList.remove('is-selected');
+            });
+            refreshSeverity(row, true);
+        }
+
+        function initPartySeverity(row) {
+            var block = row.querySelector('.party-severity');
+
+            block.addEventListener('change', function (e) {
+                var radio = e.target.closest('input[type=radio]');
+                if (radio) {
+                    radio.closest('tr').querySelectorAll('td.is-selected').forEach(function (cell) {
+                        cell.classList.remove('is-selected');
+                    });
+                    radio.closest('td').classList.add('is-selected');
+                    refreshSeverity(row, true);
+                    return;
+                }
+                if (e.target.classList.contains('party-severity__select')) {
+                    refreshSeverity(row, false);
+                }
+            });
+
+            block.querySelector('.severity-clear').addEventListener('click', function () {
+                clearPartySeverity(row);
+            });
+
+            row.querySelector('.role-checks').addEventListener('change', function () {
+                applyPartySeverity(row);
+            });
+
+            refreshSeverity(row, false);
+            applyPartySeverity(row);
+        }
+
+        // --- חומרים מסוכנים ---
+        var hazmatType = "\u05D7\u05D5\u05DE\u05E8\u05D9\u05DD \u05DE\u05E1\u05D5\u05DB\u05E0\u05D9\u05DD";
+        var detailsLabel = document.getElementById('detailsLabel');
+
+        function applyHazmat() {
+            var isHazmat = typeSelect.value === hazmatType;
+            document.querySelectorAll('.hazmat-only').forEach(function (block) {
+                block.hidden = !isHazmat;
+                block.querySelectorAll('select, textarea').forEach(function (field) {
+                    field.disabled = !isHazmat;
+                });
+            });
+            detailsLabel.textContent = isHazmat ? 'פרטי האירוע ודרכי טיפול' : 'פרטי האירוע';
+        }
+
+        typeSelect.addEventListener('change', function () {
+            selected = '';
+            fillClassifications();
+            applyAllPartySeverity();
+            applyHazmat();
+        });
+        fillClassifications();
+        applyHazmat();
+
+        // --- היסטוריית המעורבות של גורם מעורב ---
+        // נטענת מהשרת. עובד מזוהה לפי מספר השורה שלו, כדי שתעודת זהות לא תופיע בכתובת.
+        var historyTimers = new WeakMap();
+
+        function renderHistory(host, data, byNameOnly) {
+            if (!data || data.total === 0) {
+                host.hidden = false;
+                host.innerHTML = '<div class="party-history__empty">לא נמצאה מעורבות באירועים קודמים.</div>';
+                return;
+            }
+
+            var parts = ['<div class="party-history__head">מעורבות באירועים קודמים: ' + data.total + '</div>'];
+            parts.push('<ul class="party-history__list">');
+
+            data.rows.forEach(function (row) {
+                var bits = [row.eventDate, row.eventType];
+                if (row.classification) { bits.push(row.classification); }
+                bits.push('חומרה: ' + (row.severity || 'לא נקבעה'));
+                if (row.involvementRoles) { bits.push('מעורבות: ' + row.involvementRoles); }
+
+                parts.push(
+                    '<li><a href="events-details-' + row.eventId + '.html" target="_blank" rel="noopener">#'
+                    + row.eventId + '</a> ' + escapeHtml(bits.join(' · ')) + '</li>');
+            });
+
+            parts.push('</ul>');
+
+            if (data.total > data.rows.length) {
+                parts.push('<div class="party-history__more">מוצגים ' + data.rows.length + ' האחרונים.</div>');
+            }
+            if (byNameOnly) {
+                parts.push('<div class="party-history__more">ההתאמה לפי השם שהוקלד בלבד.</div>');
+            }
+
+            host.innerHTML = parts.join('');
+            host.hidden = false;
+        }
+
+        function escapeHtml(text) {
+            var div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function loadHistory(row, query, byNameOnly) {
+            var host = row.querySelector('.party-history');
+
+            if (!query) {
+                host.hidden = true;
+                host.innerHTML = '';
+                return;
+            }
+
+            // השדה מוקלד תו אחר תו, ואין טעם בבקשה לכל תו
+            clearTimeout(historyTimers.get(row));
+            historyTimers.set(row, setTimeout(function () {
+                fetch('demo:party-history' + query, { credentials: 'same-origin' })
+                    .then(function (response) { return response.ok ? response.json() : null; })
+                    .then(function (data) { renderHistory(host, data, byNameOnly); })
+                    .catch(function () {
+                        // כישלון בטעינת ההיסטוריה לא אמור לחסום הזנת אירוע
+                        host.hidden = true;
+                        host.innerHTML = '';
+                    });
+            }, 250));
+        }
+
+        function refreshHistory(row) {
+            var kind = row.querySelector('.party-kind').value;
+
+            if (kind === partyKinds.internalKind) {
+                var chosen = row.querySelector('.party-internal .emp-picker__code').value;
+                loadHistory(row, chosen ? 'employeeId=' + encodeURIComponent(chosen) : '', false);
+                return;
+            }
+
+            if (kind === partyKinds.externalKind) {
+                var name = row.querySelector('.party-external input[name$=".FullName"]').value.trim();
+                loadHistory(row, name ? 'name=' + encodeURIComponent(name) : '', true);
+                return;
+            }
+
+            loadHistory(row, '', false);
+        }
+
+        // --- בחירת עובד ---
+        // אותה התנהגות משרתת את "מדווח" ואת העובד בשורת גורם מעורב. החיפוש פונה
+        // לשרת: הדף לא מחזיק את רשימת העובדים, ותעודות הזהות מגיעות מוסתרות
+        // (*****6789). שם - חלק מהשם; ספרות - רק תעודת זהות מלאה ומדויקת.
+        // בחירה שומרת את מספר השורה של העובד בשדה המוסתר (emp-picker__code).
+        var searchUrl = 'demo:employee-search';
+
+        // POST, כדי שתעודת זהות שהוקלדה לא תופיע בכתובת (וביומני השרת)
+        var antiForgeryToken = document.querySelector('#eventForm input[name="__RequestVerificationToken"]').value;
+
+        function searchEmployees(text) {
+            var q = (text || '').trim();
+            if (!q) { return Promise.resolve([]); }
+            var body = new FormData();
+            body.append('q', q);
+            body.append('__RequestVerificationToken', antiForgeryToken);
+            return fetch(searchUrl, { method: 'POST', body: body, credentials: 'same-origin' })
+                .then(function (response) { return response.ok ? response.json() : []; })
+                .catch(function () { return []; });
+        }
+
+        function isFullId(text) { return /^\d{8,9}$/.test((text || '').trim()); }
+
+        function label(e) { return e.maskedId + ' - ' + e.fullName; }
+
+        function describe(e) {
+            var extra = [e.department, e.jobTitle].filter(Boolean).join(', ');
+            return label(e) + (extra ? ' (' + extra + ')' : '');
+        }
+
+        // options.cleared() - ההקלדה ביטלה בחירה קודמת
+        // options.picked(e) - נבחר עובד
+        // options.settled(notFound) - יציאה מהשדה בלי בחירה; notFound = הוקלד משהו שאינו עובד
+        function attachPicker(host, options) {
+            var input = host.querySelector('.emp-picker__input');
+            var code = host.querySelector('.emp-picker__code');
+            var menu = host.querySelector('.emp-picker__menu');
+            var timer = null;
+            // תשובה ישנה שמגיעה אחרי חדשה לא דורסת אותה
+            var requestNo = 0;
+
+            // העובדים שברשימה הפתוחה, והמסומן בחצים (-1 = אף אחד)
+            var shown = [];
+            var active = -1;
+
+            function closeMenu() {
+                menu.hidden = true;
+                menu.innerHTML = '';
+                shown = [];
+                active = -1;
+            }
+
+            function highlight(index) {
+                var items = menu.querySelectorAll('.emp-picker__item');
+                active = index;
+                items.forEach(function (item, i) { item.classList.toggle('is-active', i === index); });
+                if (items[index]) { items[index].scrollIntoView({ block: 'nearest' }); }
+            }
+
+            function pick(e) {
+                code.value = e.employeeId;
+                input.value = label(e);
+                options.picked(e);
+            }
+
+            function showMenu(found) {
+                menu.innerHTML = '';
+                if (found.length === 0) {
+                    closeMenu();
+                    return;
+                }
+                shown = found;
+                active = -1;
+                found.forEach(function (e) {
+                    var item = document.createElement('button');
+                    item.type = 'button';
+                    item.className = 'emp-picker__item';
+                    item.textContent = describe(e);
+                    item.addEventListener('mousedown', function (ev) {
+                        // mousedown ולא click: blur של השדה סוגר את הרשימה לפני ש-click מספיק לרוץ
+                        ev.preventDefault();
+                        pick(e);
+                        closeMenu();
+                    });
+                    menu.appendChild(item);
+                });
+                menu.hidden = false;
+            }
+
+            input.addEventListener('input', function () {
+                code.value = '';
+                options.cleared();
+                clearTimeout(timer);
+                var mine = ++requestNo;
+                // השדה מוקלד תו אחר תו, ואין טעם בבקשה לכל תו
+                timer = setTimeout(function () {
+                    searchEmployees(input.value).then(function (found) {
+                        if (mine === requestNo && document.activeElement === input) { showMenu(found); }
+                    });
+                }, 200);
+            });
+            input.addEventListener('blur', function () {
+                closeMenu();
+                clearTimeout(timer);
+                if (code.value) { return; }
+
+                var text = input.value;
+                if (!text.trim()) {
+                    options.settled(false);
+                    return;
+                }
+
+                // תעודת זהות מלאה שהוקלדה בלי לבחור מהרשימה - מתקבלת אם היא של עובד
+                if (isFullId(text)) {
+                    var mine = ++requestNo;
+                    searchEmployees(text).then(function (found) {
+                        if (mine !== requestNo) { return; }
+                        if (found.length === 1) { pick(found[0]); } else { options.settled(true); }
+                    });
+                    return;
+                }
+
+                options.settled(true);
+            });
+            // חצים מסמנים עובד ברשימה, Enter בוחר אותו (או את הראשון, אם לא סומן אף
+            // אחד). כשהרשימה פתוחה Enter בוחר ולא שולח את הטופס.
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeMenu();
+                    return;
+                }
+
+                if (menu.hidden || shown.length === 0) { return; }
+
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    highlight(active < shown.length - 1 ? active + 1 : 0);
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    highlight(active > 0 ? active - 1 : shown.length - 1);
+                } else if (e.key === 'Enter') {
+                    e.preventDefault();
+                    pick(shown[active >= 0 ? active : 0]);
+                    closeMenu();
+                }
+            });
+        }
+
+        // "מדווח": טקסט שלא נבחר מהרשימה אינו מדווח, ונמחק ביציאה מהשדה
+        var reporterHost = document.getElementById('reporterSearch').closest('.emp-picker');
+
+        attachPicker(reporterHost, {
+            cleared: function () {},
+            picked: function () {},
+            settled: function () { reporterHost.querySelector('.emp-picker__input').value = ''; }
+        });
+
+        // --- גורמים מעורבים: הוספה/הסרה של שורות ---
+        // model binding של ASP.NET עוצר באינדקס החסר הראשון, ולכן אחרי כל
+        // שינוי צריך למספר את כל השורות מחדש ברצף.
+        var rowsHost = document.getElementById('involvedRows');
+
+        function clearFields(container) {
+            container.querySelectorAll('input[type=text]').forEach(function (i) { i.value = ''; });
+            container.querySelectorAll('select').forEach(function (s) { s.selectedIndex = 0; });
+        }
+
+        function applyKind(row) {
+            var kind = row.querySelector('.party-kind').value;
+            var internalPanel = row.querySelector('.party-internal');
+            var externalPanel = row.querySelector('.party-external');
+            internalPanel.hidden = kind !== partyKinds.internalKind;
+            externalPanel.hidden = kind !== partyKinds.externalKind;
+            // שדה שנשאר מלא מאחורי פאנל מוסתר היה נשמר בשקט עם השורה.
+            // (עובד שכבר נבחר - אחרי שגיאת ולידציה או בטיוטה - מולא בשרת, ונשאר.)
+            if (internalPanel.hidden) {
+                clearFields(internalPanel);
+                internalPanel.querySelector('.emp-picker__code').value = '';
+                showEmployee(row, null, false);
+            }
+            if (externalPanel.hidden) { clearFields(externalPanel); }
+        }
+
+        function showEmployee(row, employee, notFound) {
+            var internalPanel = row.querySelector('.party-internal');
+            var status = internalPanel.querySelector('.emp-picker__status');
+            ['fullName', 'department', 'jobTitle'].forEach(function (key) {
+                var field = internalPanel.querySelector('[data-emp-field="' + key + '"]');
+                field.value = employee ? (employee[key] || '') : '';
+            });
+            status.textContent = notFound ? 'לא נמצא עובד - יש לבחור מהרשימה (שם, או תעודת זהות מלאה)' : '';
+            status.classList.toggle('is-error', !!notFound);
+        }
+
+        function initRow(row) {
+            var kindSelect = row.querySelector('.party-kind');
+            kindSelect.addEventListener('change', function () {
+                applyKind(row);
+                refreshHistory(row);
+            });
+
+            var externalName = row.querySelector('.party-external input[name$=".FullName"]');
+            externalName.addEventListener('change', function () { refreshHistory(row); });
+
+            var host = row.querySelector('.party-internal .emp-picker');
+            attachPicker(host, {
+                cleared: function () {
+                    showEmployee(row, null, false);
+                    refreshHistory(row);
+                },
+                picked: function (e) {
+                    showEmployee(row, e, false);
+                    refreshHistory(row);
+                },
+                settled: function (notFound) {
+                    showEmployee(row, null, notFound);
+                    refreshHistory(row);
+                }
+            });
+
+            applyKind(row);
+            refreshHistory(row);
+            initPartySeverity(row);
+        }
+
+        function renumber() {
+            var rows = rowsHost.querySelectorAll('.involved-row');
+            rows.forEach(function (row, i) {
+                row.querySelectorAll('[name]').forEach(function (field) {
+                    field.name = field.name.replace(/InvolvedParties\[\d+\]/, 'InvolvedParties[' + i + ']');
+                });
+                row.querySelector('.involved-row__title').textContent = 'גורם מעורב ' + (i + 1);
+            });
+            // שורה יחידה - אין מה להסיר
+            rowsHost.classList.toggle('is-single', rows.length <= 1);
+        }
+
+        document.getElementById('addInvolvedBtn').addEventListener('click', function () {
+            var rows = rowsHost.querySelectorAll('.involved-row');
+            var clone = rows[rows.length - 1].cloneNode(true);
+            clone.querySelectorAll('input[type=text]').forEach(function (input) { input.value = ''; });
+            clone.querySelectorAll('input[type=checkbox], input[type=radio]').forEach(function (box) { box.checked = false; });
+            clone.querySelectorAll('select').forEach(function (select) {
+                select.selectedIndex = 0;
+                delete select.dataset.suggested;
+            });
+            clone.querySelectorAll('textarea').forEach(function (area) { area.value = ''; });
+            clone.querySelectorAll('td.is-selected').forEach(function (cell) { cell.classList.remove('is-selected'); });
+            clone.querySelectorAll('.emp-picker__menu').forEach(function (menu) {
+                menu.hidden = true;
+                menu.innerHTML = '';
+            });
+            // העובד שנבחר בשורה המקורית יושב בשדה מוסתר, שהלולאה על שדות הטקסט לא מנקה
+            clone.querySelectorAll('.emp-picker__code').forEach(function (code) { code.value = ''; });
+            clone.querySelectorAll('.emp-picker__status').forEach(function (status) {
+                status.textContent = '';
+                status.classList.remove('is-error');
+            });
+            clone.querySelectorAll('.party-history').forEach(function (history) {
+                history.hidden = true;
+                history.innerHTML = '';
+            });
+            // השורה מתווספת לפני המספור: שמות הרדיו חייבים להשתנות לפני שהם נכנסים
+            // לטופס, אחרת הם חולקים קבוצה עם השורה שממנה שוכפלו ומבטלים את סימוניה
+            renumberClone(clone, rows.length);
+            rowsHost.appendChild(clone);
+            initRow(clone);
+            renumber();
+            clone.querySelector('.party-kind').focus();
+        });
+
+        function renumberClone(clone, index) {
+            clone.querySelectorAll('[name]').forEach(function (field) {
+                field.name = field.name.replace(/InvolvedParties\[\d+\]/, 'InvolvedParties[' + index + ']');
+            });
+        }
+
+        rowsHost.addEventListener('click', function (e) {
+            var btn = e.target.closest('.involved-remove');
+            if (!btn) { return; }
+            if (rowsHost.querySelectorAll('.involved-row').length <= 1) { return; }
+            btn.closest('.involved-row').remove();
+            renumber();
+        });
+
+        rowsHost.querySelectorAll('.involved-row').forEach(initRow);
+        renumber();
+
+        // --- שמירה: טיוטה או סופית ---
+        var form = document.getElementById('eventForm');
+        var saveButtons = [document.getElementById('eventSaveBtn'), document.getElementById('eventDraftBtn')];
+        var mailAttachmentLimit = 0;
+
+        // בדיקת הקבצים כבר בבחירה, לפני שמירה: שגיאה מהשרת מחזירה את הטופס, והדפדפן
+        // מרוקן את כל שדות הקבצים - כך סרטון שנבחר בשדה התמונות מחייב לבחור הכול מחדש.
+        // קובץ לא מתאים יוצא מהשדה עם הודעה, והשאר נשארים. השרת עדיין בודק בעצמו.
+        var fileRules = {
+            attachments: {
+                ok: function (f) { return ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/bmp'].indexOf((f.type || '').toLowerCase()) >= 0; },
+                wrong: 'אינו תמונה. סרטונים מצרפים בשדה "הוספת סרטונים".',
+                maxMb: 5
+            },
+            videos: {
+                ok: function (f) { return /\.(mp4|mov|webm|avi|wmv|mkv|3gp|m4v)$/i.test(f.name); },
+                wrong: 'אינו קובץ וידאו נתמך. תמונות מצרפים בשדה "הוספת תמונות".',
+                maxMb: 100
+            },
+            reportDocument: {
+                ok: function (f) { return /\.docx?$/i.test(f.name); },
+                wrong: 'אינו קובץ Word (docx או doc).',
+                maxMb: 10
+            }
+        };
+
+        Object.keys(fileRules).forEach(function (inputId) {
+            var input = document.getElementById(inputId);
+            if (!input) return;
+            var rule = fileRules[inputId];
+
+            input.addEventListener('change', function () {
+                var problems = [];
+                var kept = [];
+                Array.prototype.forEach.call(input.files, function (f) {
+                    if (!rule.ok(f)) {
+                        problems.push('"' + f.name + '" ' + rule.wrong);
+                    } else if (f.size > rule.maxMb * 1024 * 1024) {
+                        problems.push('"' + f.name + '" גדול מ-' + rule.maxMb + 'MB.');
+                    } else {
+                        kept.push(f);
+                    }
+                });
+                if (!problems.length) return;
+
+                try {
+                    var dt = new DataTransfer();
+                    kept.forEach(function (f) { dt.items.add(f); });
+                    input.files = dt.files;
+                } catch (err) {
+                    input.value = '';
+                    kept = [];
+                }
+
+                alert(problems.join('\n') + (kept.length ? '\n\nשאר הקבצים שנבחרו נשארו.' : '\n\nהקובץ לא צורף.'));
+            });
+        });
+
+        // קבצים קיימים בטיוטה: "הסרה" מסמנת את הקובץ, והוא נמחק רק בשמירה -
+        // יציאה מהדף בלי לשמור לא מוחקת כלום
+        document.querySelectorAll('.draft-file__remove').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var row = button.closest('.draft-file');
+                var box = row.querySelector('input[type=checkbox]');
+                box.checked = !box.checked;
+                row.classList.toggle('draft-file--removed', box.checked);
+                button.innerHTML = box.checked
+                    ? '<i class="bi bi-arrow-counterclockwise"></i> ביטול'
+                    : '<i class="bi bi-trash"></i> הסרה';
+            });
+        });
+
+        form.addEventListener('submit', function (e) {
+            var mode = (e.submitter && e.submitter.value === 'draft') ? 'draft' : 'final';
+            document.getElementById('SaveMode').value = mode;
+
+            if (mode === 'final') {
+                // הסבר חסר לשינוי חומרה - נבדק גם בשרת, אבל עדיף לעצור לפני העלאת הקבצים
+                var missing = Array.prototype.find.call(
+                    document.querySelectorAll('.party-severity:not([hidden]) .severity-change:not([hidden]) .severity-change__text'),
+                    function (area) { return !area.value.trim(); });
+                if (missing) {
+                    e.preventDefault();
+                    alert('חומרת המעורבות שונתה מברירת המחדל של הטבלה - יש להשלים את ההסבר.');
+                    missing.focus();
+                    return;
+                }
+
+                // אפשר לתאר את האירוע בטקסט או בקובץ Word. אם אין אף אחד מהם, מוודאים שזו הכוונה.
+                var details = document.getElementById('Details').value.trim();
+                var docInput = document.getElementById('reportDocument');
+                var existingDoc = document.getElementById('existingReportDocument');
+                var keepsExistingDoc = existingDoc && !existingDoc.querySelector('input[name=RemoveReportDocument]').checked;
+                var hasDocument = keepsExistingDoc || (docInput && docInput.files && docInput.files.length > 0);
+
+                if (!details && !hasDocument) {
+                    var proceed = confirm('לא הוזנו פרטי אירוע ולא צורף קובץ Word.\nלשמור את האירוע בכל זאת?');
+                    if (!proceed) {
+                        e.preventDefault();
+                        return;
+                    }
+                }
+
+                // סרטונים שלא נכנסים למייל נשלחים כקישור לדף האירוע (ראו TrySendEventMailAsync).
+                // הבדיקה כאן משוערת - גודל ה-PDF הסופי לא ידוע בדפדפן - והשרת מחליט בפועל.
+                if (mailAttachmentLimit) {
+                    var videoBytes = 0;
+                    document.querySelectorAll('.draft-file[data-video-size]').forEach(function (row) {
+                        if (!row.querySelector('input[name=RemoveVideoIds]').checked) {
+                            videoBytes += Number(row.getAttribute('data-video-size')) || 0;
+                        }
+                    });
+                    Array.prototype.forEach.call(document.getElementById('videos').files, function (f) { videoBytes += f.size; });
+
+                    var otherBytes = 0;
+                    ['attachments', 'reportDocument'].forEach(function (id) {
+                        var input = document.getElementById(id);
+                        if (input && input.files) {
+                            Array.prototype.forEach.call(input.files, function (f) { otherBytes += f.size; });
+                        }
+                    });
+
+                    if (videoBytes > 0 && videoBytes + otherBytes > mailAttachmentLimit) {
+                        var mb = (videoBytes / 1024 / 1024).toFixed(1);
+                        var sendAnyway = confirm(
+                            'הסרטונים שצורפו (' + mb + 'MB) גדולים מדי לצירוף למייל.\n' +
+                            'האירוע יישמר עם הסרטונים, והנמענים יקבלו במייל את הדו"ח וקישור לדף האירוע במקום הסרטונים.\n' +
+                            'להמשיך בשמירה?');
+                        if (!sendAnyway) {
+                            e.preventDefault();
+                            return;
+                        }
+                    }
+                }
+            }
+
+            var btn = mode === 'draft' ? saveButtons[1] : saveButtons[0];
+            saveButtons.forEach(function (b) { b.disabled = true; });
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> שומר...';
+        });
+    })();
+</script>
+
+        </main>
+    </div>
+
+    <footer b-9ud7xt2yc2 class="site-footer text-center py-3">
+        מחלקת ביטחון
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="demo/sphere.js"></script>
+    <script src="demo/data.js"></script>
+    <script src="demo/demo.js"></script>
+</body>
+</html>
